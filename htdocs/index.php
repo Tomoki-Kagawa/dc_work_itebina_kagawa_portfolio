@@ -11,10 +11,9 @@
 
   <!--ヘッダー-->
   <body>
-    <header class="clearfix background-color">
+    <header class="clearfix background-color" id="Top">
       <h1 class="header-left">Tomoki Kagawa's Portfolio</h1>
       <div class="header-right clearfix">
-      <!--ul class="header-right clearfix"-->
       <details>
         <summary><span><p>menu</p></span></summary>
         <ul class="background-color">
@@ -34,10 +33,10 @@
         <h2 class="Japanese">自己紹介<br><span class="English">Self Introduction</span></h2>
         <div class="explanation">
           <p>
-            　私の名前は<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。<br>
-            　学生の頃は組み込み系の技術や福祉について学び、研究室では介護用ロボットの開発をしていました。<br>
-            　現在はディーキャリアITエキスパート海老名オフィスに通所し、訓練の一環としてポートフォリオを作成しました。</br>
-            　もしよろしければ最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。よろしくお願い致します。
+            私の名前は<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。<br>
+            学生の頃は組み込み系の技術や福祉について学び、研究室では介護用ロボットの開発をしていました。<br>
+            現在はディーキャリアITエキスパート海老名オフィスに通所し、訓練の一環としてポートフォリオを作成しました。</br>
+            もしよろしければ最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。よろしくお願い致します。
           </p>
         </div>
         <img src="./images/merlion.jpg" alt="merlion.jpg">
@@ -119,30 +118,28 @@
       <p>画像をクリックすることで作成物をご覧いただけます。</p>
       <div class="deliverable_child scroll" id="JavaScript">
         <h4 class="background-color"><span class="theme">JavaScript・ピアノ</span></h4>
-        <a href="./js/index.html"><img src="./images/js_piano.png" alt="js_piano.png"></a>
+        <a href="./js/index.html" target="_blank"><img src="./images/js_piano.png" alt="js_piano.png"></a>
         <p>JavaScriptで作成したピアノ演奏サイトです。<br>
         音量バーで音の大きさを調整でき、鍵盤をクリックすると演奏が可能です。
         自動演奏では、きらきら星かチューリップのどちらかがランダムで演奏されます。
-        下部の入力欄に半角で入力するとキーボードでも演奏できます。<br>
-        </p>
+        下部の入力欄に半角で入力するとキーボードでも演奏できます。</p>
       </div>
       <div class="deliverable_child scroll" id="PHP">
         <h4 class="background-color"><span class="theme">PHP・EC Site</span></h4>
-        <a href="./ec_site/index.php"><img src="./images/ec_site.png" alt="ec_site.png"></a>
+        <a href="./ec_site/index.php" target="_blank"><img src="./images/ec_site.png" alt="ec_site.png"></a>
         <p>PHPで作成したシンプルな見た目のECサイトです。<br>
         UIの個数を制限をし、見た目が整理されたものにしました。
         商品画像をクリックすると詳細が表示されるようにしました。
-        購入者に購入完了メールを送るようにしました。<br> 
-        </p>
+        購入者に購入完了メールを送るようにしました。</p>
       </div>
       <div class="deliverable_child scroll" id="WordPerss">
         <h4 class="background-color"><span class="theme">Wordpress・SampleSite</span></h4>
-        <a href="./wp"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
+        <a href="./wp" target="_blank"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
         <p>wordpressでsamplesiteを作成しました。<br>wordpress学習でテキストに沿って作成したサンプルです。</p>
       </div>
       <div class="deliverable_child scroll" id="arcadecontroller">
         <h4 class="background-color"><span class="theme">アーケードコントローラー</span></h4>
-        <a href="./images/PF_アケコン.pdf"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
+        <a href="./images/PF_アケコン.pdf" target="_blank"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
         <p>趣味の格闘ゲームのアーケードコントローラーを構想含め3日で作成しました。<br>
         画像をクリックすると事業所内のスピーチで発表した時の資料のPDFをご覧頂けます。</p>
       </div>
@@ -212,5 +209,6 @@
     <footer class="background-color">
       <p>Copyright &copy; 2025 Tomoki Kagawa</p>
     </footer>
+    <div class="return_top"> <!--background-color--><a href="#TOP">TOPに戻る</a></div>
   </body>
 </html>

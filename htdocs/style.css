@@ -147,6 +147,26 @@ summary span:after {
     top: 8px;
     /* top: 12px; */
 }
+.drawer_hidden{
+    display: none;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+details[open] summary span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+details[open] summary span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+details[open] summary span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 /*ハンバーガーメニューのmenu部分 */
 summary span p{
     margin-top:-15px; 
@@ -162,6 +182,7 @@ summary span p{
 .header-right ul{
     display: flex;
     flex-flow: column;
+    border-radius: 0 0 0 3px;
     /* background-color: #000000CC; */
     /* background-color: #A8DADC; */
 }
@@ -383,7 +404,7 @@ summary span p{
     line-height: 44px;
     text-align: center;
     /* font-size: 14px; */
-    font-size: 22px;
+    font-size: 20px;
     /* background-color: #000000CC; */
     /* background-color: #A8DADC; */
     color: #fff;
@@ -577,6 +598,24 @@ footer p {
     font-size:18px;
 }
 
+.return_top{
+    background-color: lightseagreen;
+    position: fixed;
+    border-radius: 5px 5px 0 0;
+    bottom: 0px;
+    right: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    /*transform: translateX(-80%);*/
+    width: 120px;
+    /*outline: 2px black solid;*/
+}
+.return_top a{
+    text-decoration: none;
+    color: #fff;
+    font-size:18px;
+}
 /*------------------------
 スクロール
 ------------------------*/

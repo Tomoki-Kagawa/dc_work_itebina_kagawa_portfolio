@@ -28,7 +28,7 @@
     <div class="main"></div>
 
     <!--自己紹介-->
-    <div class="self_introduction container scroll" id="self-introduction">
+    <div class="self_introduction container" id="self-introduction">
       <div class="intro">
         <h2 class="Japanese">自己紹介<br><span class="English">Self Introduction</span></h2>
         <div class="explanation">
@@ -57,7 +57,7 @@
         <div class="box2 box-child background-color">
           <h3 class="Japanese">プログラミング経験<br><span class="English">Experience</span></h3>
           <ul>
-            <li class="C">C/C++（移動ロボット・介護ロボット）</li>
+            <li class="C">C/C++（介護ロボット・<a href="#Arduino/C++">ブロック崩し</a>）</li>
             <li class="Java">Java（Androidアプリ）</li>
             <li class="JavaScript">JavaScript（<a href="#JavaScript">ピアノアプリ</a>）</li>
             <div class="etc_flex"><li class="PHP">PHP（<a href="#PHP">EC Site</a>）</li><li class="etc">など</li></div>
@@ -66,7 +66,7 @@
       </div>
     </div>
     <!-- 実装サンプル-->
-    <div class="Sample container scroll" id="Archives">
+    <div class="Sample container" id="Archives">
       <h2 class="Japanese">過去の記録<br><span class="English">Archives</span></h2>
     </div>
 
@@ -116,6 +116,8 @@
     <div class="deliverable container">
       <h3>訓練成果</h3>
       <p>画像をクリックすることで作成物をご覧いただけます。</p>
+      <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio" target="_blank" class="git">
+        github</a>からご覧いただけますと幸いです。</p>
       <div class="deliverable_child scroll" id="JavaScript">
         <h4 class="background-color"><span class="theme">JavaScript・ピアノ</span></h4>
         <a href="./js/index.html" target="_blank"><img src="./images/js_piano.png" alt="js_piano.png"></a>
@@ -143,6 +145,12 @@
         <p>趣味の格闘ゲームのアーケードコントローラーを構想含め3日で作成しました。<br>
         画像をクリックすると事業所内のスピーチで発表した時の資料のPDFをご覧頂けます。</p>
       </div>
+      <div class="deliverable_child scroll" id="Arduino/C++">
+        <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
+        <a href="./images/moveBreakingBlocks.webm" target="_blank"><img src="./images/PFC++.png" alt="arcadecontroller.jpg"></a>
+        <p>Arduinoで脈拍を取り、ubuntuにデータを送信。受信データをC++でグラフ化し、BPMをブロック崩しに送信。opencvで顔認識を行い、顔の位置でパドルのコントロールを行う。<br>
+        画像をクリックすると動画をご覧頂けます。</p>
+      </div>
     </div>
 
     <?php
@@ -163,6 +171,8 @@
       
       //送信先のメールアドレス
       $to="tomoki.career15@gmail.com";
+      $from=$email;
+      $subject_from="PortFolio:".$name."様下記の内容でお問い合わせしました。";
       $subject="PortFolio:".$name."様からお問い合わせです。";
       $message=
       "PortFolio:".$name."様からお問い合わせです。
@@ -173,6 +183,7 @@
       mb_language("Japanese");
       mb_internal_encoding("UTF-8");
       mb_send_mail($to,$subject,$message,$header);
+      mb_send_mail($from,$subject_from,$message,$header);
       ?>
       <script>alert("送信しました。お問い合わせありがとうございます。")</script>
       <?php

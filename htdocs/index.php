@@ -32,12 +32,10 @@
       <div class="intro">
         <h2 class="Japanese">自己紹介<br><span class="English">Self Introduction</span></h2>
         <div class="explanation">
-          <p>
-            私の名前は<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。<br>
-            学生の頃は組み込み系の技術や福祉について学び、研究室では介護用ロボットの開発をしていました。<br>
-            現在はディーキャリアITエキスパート海老名オフィスに通所し、訓練の一環としてポートフォリオを作成しました。</br>
-            もしよろしければ最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。よろしくお願い致します。
-          </p>
+          <p>私の名前は<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。</p>
+          <p>学生の頃は組み込み系の技術や福祉について学び、研究室では介護用ロボットの開発をしていました。</p>
+          <p>現在はディーキャリアITエキスパート海老名オフィスに通所し、訓練の一環としてポートフォリオを作成しました。</p>
+          <p>もしよろしければ最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。よろしくお願い致します。</p>
         </div>
         <img src="./images/merlion.jpg" alt="merlion.jpg">
       </div>
@@ -121,37 +119,90 @@
       <div class="deliverable_child scroll" id="JavaScript">
         <h4 class="background-color"><span class="theme">JavaScript・ピアノ</span></h4>
         <a href="./js/index.html" target="_blank"><img src="./images/js_piano.png" alt="js_piano.png"></a>
-        <p>JavaScriptで作成したピアノ演奏サイトです。<br>
-        音量バーで音の大きさを調整でき、鍵盤をクリックすると演奏が可能です。
-        自動演奏では、きらきら星かチューリップのどちらかがランダムで演奏されます。
-        下部の入力欄に半角で入力するとキーボードでも演奏できます。</p>
+        <p>JavaScriptで作成したピアノ演奏サイトです。</p>
+        <p>音量バーで音の大きさを調整でき、鍵盤をクリックすると演奏が可能です。</p>
+        <p>自動演奏では、きらきら星かチューリップのどちらかがランダムで演奏されます。</p>
+        <p>下部の入力欄に半角で入力するとキーボードでも演奏できます。</p>
       </div>
+      
       <div class="deliverable_child scroll" id="PHP">
         <h4 class="background-color"><span class="theme">PHP・EC Site</span></h4>
+      <!--div class="deliverable_flex"-->
         <a href="./ec_site/index.php" target="_blank"><img src="./images/ec_site.png" alt="ec_site.png"></a>
-        <p>PHPで作成したシンプルな見た目のECサイトです。<br>
-        UIの個数を制限をし、見た目が整理されたものにしました。
-        商品画像をクリックすると詳細が表示されるようにしました。
-        購入者に購入完了メールを送るようにしました。</p>
+      
+      <!--div--> 
+        <p>PHPで作成したシンプルな見た目のECサイトです。</p>
+        <p>UIの個数を制限をし、見た目が整理されたものにしました。</p>
+        <p>商品画像をクリックすると詳細が表示されるようにしました。</p>
+        <p>購入者に購入完了メールを送るようにしました。</p>
+      <!--/div-->
+      <!--/div-->
       </div>
       <div class="deliverable_child scroll" id="WordPerss">
         <h4 class="background-color"><span class="theme">Wordpress・SampleSite</span></h4>
         <a href="./wp" target="_blank"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
-        <p>wordpressでsamplesiteを作成しました。<br>wordpress学習でテキストに沿って作成したサンプルです。</p>
+        <p>wordpressでsamplesiteを作成しました。</p>
+        <p>wordpress学習でテキストに沿って作成したサンプルです。</p>
       </div>
       <div class="deliverable_child scroll" id="arcadecontroller">
         <h4 class="background-color"><span class="theme">アーケードコントローラー</span></h4>
         <a href="./images/PF_アケコン.pdf" target="_blank"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
-        <p>趣味の格闘ゲームのアーケードコントローラーを構想含め3日で作成しました。<br>
-        画像をクリックすると事業所内のスピーチで発表した時の資料のPDFをご覧頂けます。</p>
+        <p>趣味の格闘ゲームのアーケードコントローラーを構想含め3日で作成しました。</p>
+        <p>画像をクリックすると事業所内のスピーチで発表した時の資料のPDFをご覧頂けます。</p>
       </div>
       <div class="deliverable_child scroll" id="Arduino/C++">
         <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
         <a href="./images/moveBreakingBlocks.webm" target="_blank"><img src="./images/PFC++.png" alt="arcadecontroller.jpg"></a>
-        <p>Arduinoで脈拍を取り、ubuntuにデータを送信。受信データをC++でグラフ化し、BPMをブロック崩しに送信。opencvで顔認識を行い、顔の位置でパドルのコントロールを行う。<br>
-        画像をクリックすると動画をご覧頂けます。</p>
+        <p>Arduinoで脈拍を取り、ubuntuにデータを送信。受信データをC++でグラフ化し、BPMをブロック崩しに送信。opencvで顔認識を行い、顔の位置でパドルのコントロールを行う。</p>
+        <p>画像をクリックすると動画をご覧頂けます。</p>
       </div>
     </div>
+
+<script>
+  // 入力要素とエラー表示要素を取得
+  const email = document.getElementById('email');
+  const email_error = document.getElementById('email_error');
+  const send_btn = document.getElementById('send_btn');
+
+  // バリデーション用の正規表現
+  const email_regex =/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+  
+  // 各フィールドが有効かどうかのフラグ
+  let email_valid = false;
+  
+  // ユーザー名リアルタイムチェック
+  email.addEventListener('input', function() {
+    const value = email.value.trim();
+    if (value === '') {
+      email_error.textContent = '';
+      email_error.style.display = 'none';
+      email_valid = false;
+    } else if (!email_regex.test(value)) {
+      email_error.textContent = '登録条件を満たしてください';
+      email_error.style.display = 'block';
+      email_valid = false;
+    } else {
+      email_error.textContent = '';
+      email_error.style.display = 'none';
+      email_valid = true;
+    }
+    toggleSubmitButton();
+  });
+
+  // 両方とも有効になったら送信ボタンを有効化
+  function toggleSubmitButton() {
+    submit_btn.disabled = email_valid;
+  }
+
+  // フォーム送信前にも最終チェック（保険として）
+  document.getElementById('registration_form').addEventListener('submit', function(e) {
+    if (!email_valid) {
+      e.preventDefault();
+    }
+  });
+
+
+</script>
 
     <?php
     //メール送信
@@ -201,7 +252,8 @@
           </div>
           <div class="form-child">
             <label class="required"><span class="label">メールアドレス</span></label>
-            <input type="text" name="email" required>
+            <input type="text" id="email"name="email" required>
+            <div id="email_error" class="error-message"></div>
           </div>
           <div class="form-child">
             <label class="not_required"><span class="label">お問い合わせ内容</span></label>
@@ -211,7 +263,7 @@
             <label class="not_required"><span class="label">ポートフォリオをご覧いただいた感想</span></label>
             <input type="text" name="impression">
           </div>
-          <input class="button" name="sent" type="submit" value="送信">
+          <input class="button" name="send_btn" id="send_btn" type="submit" value="送信">
         </div>
       </form>
     </div>

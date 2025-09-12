@@ -436,6 +436,10 @@ summary span p{
 .deliverable{
     margin: 80px auto;
 }
+.deliverable_flex{
+    display: flex;
+    flex-wrap: nowrap; 
+}
 .deliverable_child{
     text-align: center;
     width: 500px;
@@ -576,6 +580,13 @@ summary span p{
     margin: 20px auto 100px;
     border: none;
     font-size: 18px;
+}
+
+.error-message {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 0.2em;
+      display: none;
 }
 
 /*------------------------

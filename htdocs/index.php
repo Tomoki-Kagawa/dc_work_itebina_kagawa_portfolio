@@ -1,5 +1,6 @@
 <!--https://portfolio02.dc-itex.com/ebina/0003/index.html-->
 <?php
+ob_start();
 session_start();
 ?>
 <!DOCTYPE html>
@@ -198,12 +199,12 @@ session_start();
 
   // 両方とも有効になったら送信ボタンを有効化
   function toggleSubmitButton() {
-    submit_btn.disabled = !send_btn;
+    send_btn.disabled = !email_valid;
   }
 
   // フォーム送信前にも最終チェック（保険として）
   document.getElementById('Contact_form').addEventListener('submit', function(e) {
-    if (!send_btn) {
+    if (!email_valid) {
       e.preventDefault();
     }
   });
@@ -213,11 +214,9 @@ session_start();
 
     <?php
     //メール送信
-    if(isset($_POST["sent"])){
+    if(isset($_POST["send_btn"])){
       $_SESSION["flg"]="true";
-    }
-
-    if($_SESSION["flg"]==="true"){
+     
       if(isset($_POST['name'])){
         $name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
       }
@@ -247,10 +246,15 @@ session_start();
       mb_internal_encoding("UTF-8");
       mb_send_mail($to,$subject,$message,$header);
       mb_send_mail($from,$subject_from,$message,$header_admin);
+      ob_clean();
+      header("Location:./index.php");
+      exit();
+    }
+    if($_SESSION["flg"]=="true"){
+      $_SESSION["flg"]="false";
       ?>
       <script>alert("送信しました。お問い合わせありがとうございます。")</script>
       <?php
-      $_SESSION["flg"]="false";
     }
 ?>
     <!--お問い合わせフォーム-->
@@ -265,7 +269,7 @@ session_start();
           </div>
           <div class="form-child">
             <label class="required"><span class="label">メールアドレス</span></label>
-            <input type="text" id="email"name="email" required>
+            <input type="text" id="email" name="email"><!-- required-->
             <div id="email_error" class="error-message"></div>
           </div>
           <div class="form-child">
@@ -288,3 +292,6 @@ session_start();
     <div class="return_top"> <!--background-color--><a href="#TOP">TOPに戻る</a></div>
   </body>
 </html>
+<?php
+ob_end_flush();
+?>

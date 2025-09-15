@@ -12,7 +12,7 @@
   <!--ヘッダー-->
   <body>
     <header class="clearfix background-color" id="Top">
-      <h1 class="header-left">Tomoki Kagawa's Portfolio</h1>
+      <h1 class="header-left"><a href="./index.php">Tomoki Kagawa's Portfolio</a></h1>
       <div class="header-right clearfix">
       <details>
         <summary><span><p>menu</p></span></summary>
@@ -23,6 +23,7 @@
         </ul>
       </details>
     </header>
+    <div class="empty"></div>
 
     <!--メイン画像-->
     <div class="main"></div>
@@ -86,7 +87,7 @@
           <div class="back_color">  
             <img src="./images/manipulator.jpg" alt="manipulator.jpg">
           </div>  
-          <h4 class="background-color"><span class="theme">移動マニピュレーター</span></h4>
+          <h4 class="background-color"><span class="theme">移動マニピュレータ</span></h4>
           <p>大学生の頃、移動式マニピュレーターを作成し、Javaで作成したAndroidコントローラーアプリをbluetoothで接続し操作できるものを作成しました。</p>
         </div>
          <!--画像3-->
@@ -113,48 +114,51 @@
     <!--成果物-->
     <div class="deliverable container">
       <h3>訓練成果</h3>
-      <p>画像をクリックすることで作成物をご覧いただけます。</p>
+      <!--p>画像をクリックすることで作成物をご覧いただけます。</p-->
+      <p>画像をクリックすることで説明ページに移動することが出来ます</p>
       <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio" target="_blank" class="git">
         github</a>からご覧いただけますと幸いです。</p>
       <div class="deliverable_child scroll" id="JavaScript">
         <h4 class="background-color"><span class="theme">JavaScript・ピアノ</span></h4>
-        <a href="./js/index.html" target="_blank"><img src="./images/js_piano.png" alt="js_piano.png"></a>
-        <p>JavaScriptで作成したピアノ演奏サイトです。</p>
+        <!--a href="./js/index.html" target="_blank"-->
+        <a href="./JavaScript.html"><img src="./images/js_piano.png" alt="js_piano.png"></a>
+        <!--p>JavaScriptで作成したピアノ演奏サイトです。</p>
         <p>音量バーで音の大きさを調整でき、鍵盤をクリックすると演奏が可能です。</p>
         <p>自動演奏では、きらきら星かチューリップのどちらかがランダムで演奏されます。</p>
-        <p>下部の入力欄に半角で入力するとキーボードでも演奏できます。</p>
+        <p>下部の入力欄に半角で入力するとキーボードでも演奏できます。</p-->
       </div>
       
       <div class="deliverable_child scroll" id="PHP">
         <h4 class="background-color"><span class="theme">PHP・EC Site</span></h4>
       <!--div class="deliverable_flex"-->
-        <a href="./ec_site/index.php" target="_blank"><img src="./images/ec_site.png" alt="ec_site.png"></a>
+        <a href="./PHP.html"><img src="./images/ec_site.png" alt="ec_site.png"></a>
       
-      <!--div--> 
+      <!--div> 
         <p>PHPで作成したシンプルな見た目のECサイトです。</p>
         <p>UIの個数を制限をし、見た目が整理されたものにしました。</p>
         <p>商品画像をクリックすると詳細が表示されるようにしました。</p>
         <p>購入者に購入完了メールを送るようにしました。</p>
-      <!--/div-->
+      </div-->
       <!--/div-->
       </div>
       <div class="deliverable_child scroll" id="WordPerss">
         <h4 class="background-color"><span class="theme">Wordpress・SampleSite</span></h4>
-        <a href="./wp" target="_blank"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
-        <p>wordpressでsamplesiteを作成しました。</p>
-        <p>wordpress学習でテキストに沿って作成したサンプルです。</p>
+        <a href="./Wordpress.html"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
+        <!--p>wordpressでsamplesiteを作成しました。</p>
+        <p>wordpress学習でテキストに沿って作成したサンプルです。</p-->
       </div>
+      <h3>訓練外成果</h3>
       <div class="deliverable_child scroll" id="arcadecontroller">
         <h4 class="background-color"><span class="theme">アーケードコントローラー</span></h4>
-        <a href="./images/PF_アケコン.pdf" target="_blank"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
-        <p>趣味の格闘ゲームのアーケードコントローラーを構想含め3日で作成しました。</p>
-        <p>画像をクリックすると事業所内のスピーチで発表した時の資料のPDFをご覧頂けます。</p>
+        <a href="./Arcadecontroller.html"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
+        <!--p>趣味の格闘ゲームのアーケードコントローラーを構想含め3日で作成しました。</p>
+        <p>画像をクリックすると事業所内のスピーチで発表した時の資料のPDFをご覧頂けます。</p-->
       </div>
       <div class="deliverable_child scroll" id="Arduino/C++">
         <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
-        <a href="./images/moveBreakingBlocks.webm" target="_blank"><img src="./images/PFC++.png" alt="arcadecontroller.jpg"></a>
-        <p>Arduinoで脈拍を取り、ubuntuにデータを送信。受信データをC++でグラフ化し、BPMをブロック崩しに送信。opencvで顔認識を行い、顔の位置でパドルのコントロールを行う。</p>
-        <p>画像をクリックすると動画をご覧頂けます。</p>
+        <a href="./C++.html"><img src="./images/PFC++.png" alt="PFC++.png"></a>
+        <!--p>Arduinoで脈拍を取り、ubuntuにデータを送信。受信データをC++でグラフ化し、BPMをブロック崩しに送信。opencvで顔認識を行い、顔の位置でパドルのコントロールを行う。</p>
+        <p>画像をクリックすると動画をご覧頂けます。</p-->
       </div>
     </div>
 
@@ -191,11 +195,11 @@
 
   // 両方とも有効になったら送信ボタンを有効化
   function toggleSubmitButton() {
-    submit_btn.disabled = email_valid;
+    submit_btn.disabled = !email_valid;
   }
 
   // フォーム送信前にも最終チェック（保険として）
-  document.getElementById('registration_form').addEventListener('submit', function(e) {
+  document.getElementById('Contact_form').addEventListener('submit', function(e) {
     if (!email_valid) {
       e.preventDefault();
     }
@@ -244,7 +248,7 @@
     <div class="form container scroll" id="Contact">
       <h2 class="Japanese">お問い合わせ<br><span class="English">Contact</span></h2>
       <!--h3>お問い合わせ</h3-->
-      <form method="post">
+      <form method="post" id="Contact_form">
         <div class="form-parent">
           <div class="form-child">
             <label class="required"><span class="label">お名前</span></label>

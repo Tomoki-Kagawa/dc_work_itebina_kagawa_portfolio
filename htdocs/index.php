@@ -1,4 +1,7 @@
 <!--https://portfolio02.dc-itex.com/ebina/0003/index.html-->
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <!--ページ内以外の必要事項-->
@@ -195,12 +198,12 @@
 
   // 両方とも有効になったら送信ボタンを有効化
   function toggleSubmitButton() {
-    submit_btn.disabled = !email_valid;
+    submit_btn.disabled = !send_btn;
   }
 
   // フォーム送信前にも最終チェック（保険として）
   document.getElementById('Contact_form').addEventListener('submit', function(e) {
-    if (!email_valid) {
+    if (!send_btn) {
       e.preventDefault();
     }
   });
@@ -211,6 +214,10 @@
     <?php
     //メール送信
     if(isset($_POST["sent"])){
+      $_SESSION["flg"]="true";
+    }
+
+    if($_SESSION["flg"]==="true"){
       if(isset($_POST['name'])){
         $name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8');
       }
@@ -234,14 +241,16 @@
       お問い合わせ内容：".$inquiry."
       PortFolioを見た感想：".$impression;
       $header="From:".$email;
+      $header_admin="From:".$to;
 
       mb_language("Japanese");
       mb_internal_encoding("UTF-8");
       mb_send_mail($to,$subject,$message,$header);
-      mb_send_mail($from,$subject_from,$message,$header);
+      mb_send_mail($from,$subject_from,$message,$header_admin);
       ?>
       <script>alert("送信しました。お問い合わせありがとうございます。")</script>
       <?php
+      $_SESSION["flg"]="false";
     }
 ?>
     <!--お問い合わせフォーム-->

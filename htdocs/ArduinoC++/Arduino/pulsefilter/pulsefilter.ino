@@ -1,4 +1,4 @@
-#define USE_ARDUINO_INTERRUPTS true    // Set-up low-level interrupts for most acurate BPM math.
+#define USE_ARDUINO_INTERRUPTS true   
 #include <LiquidCrystal.h>
 
 // PINの設定
@@ -24,7 +24,7 @@ int bpm = 0;
 int sound =1000;//330//70;// スピーカー
 
 float nowTime = 0;
-float lastTime = 0; // 最後の心拍時刻
+float lastTime = 0; 
 float interval=0;
 
 float filtervalue=0;
@@ -43,10 +43,10 @@ void loop() {
   
   //パルス値をフィルタ
   filtervalue=alpha*pulse+(1-alpha)*lastfiltervalue;
-  Serial.print((int)filtervalue);
-  Serial.println("");
+  Serial.println((int)filtervalue);
+  //Serial.println();
 
-  // ピーク検出：閾値を上抜けた瞬間
+  // ピーク検出
   if ((int)filtervalue > threshold &&  lastfiltervalue>filtervalue  && beeped==false) {
     tone(beep, sound, 50); // 
     beeped = true;  // 1回鳴らしたフラグを立てる
@@ -73,6 +73,7 @@ void loop() {
   lcd.print("BPM:");
   lcd.print(bpm);
 
+  //Modeせってい
   if(bpm>75){
     lcd.setCursor(0,2);
     lcd.print("Mode:HIGH");

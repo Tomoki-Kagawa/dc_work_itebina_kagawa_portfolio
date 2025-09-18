@@ -165,53 +165,6 @@ session_start();
         <p>画像をクリックすると動画をご覧頂けます。</p-->
       </div>
     </div>
-
-<script>
-  // 入力要素とエラー表示要素を取得
-  const email = document.getElementById('email');
-  const email_error = document.getElementById('email_error');
-  const send_btn = document.getElementById('send_btn');
-
-  // バリデーション用の正規表現
-  const email_regex =/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-  
-  // 各フィールドが有効かどうかのフラグ
-  let email_valid = false;
-  
-  // ユーザー名リアルタイムチェック
-  email.addEventListener('input', function() {
-    const value = email.value.trim();
-    if (value === '') {
-      email_error.textContent = '';
-      email_error.style.display = 'none';
-      email_valid = false;
-    } else if (!email_regex.test(value)) {
-      email_error.textContent = '登録条件を満たしてください';
-      email_error.style.display = 'block';
-      email_valid = false;
-    } else {
-      email_error.textContent = '';
-      email_error.style.display = 'none';
-      email_valid = true;
-    }
-    toggleSubmitButton();
-  });
-
-  // 両方とも有効になったら送信ボタンを有効化
-  function toggleSubmitButton() {
-    send_btn.disabled = !email_valid;
-  }
-
-  // フォーム送信前にも最終チェック（保険として）
-  document.getElementById('Contact_form').addEventListener('submit', function(e) {
-    if (!email_valid) {
-      e.preventDefault();
-    }
-  });
-
-
-</script>
-
     <?php
     //メール送信
     if(isset($_POST["send_btn"])){
@@ -269,8 +222,7 @@ session_start();
           </div>
           <div class="form-child">
             <label class="required"><span class="label">メールアドレス</span></label>
-            <input type="text" id="email" name="email"><!-- required-->
-            <div id="email_error" class="error-message"></div>
+            <input type="email" id="email" name="email" required>
           </div>
           <div class="form-child">
             <label class="not_required"><span class="label">お問い合わせ内容</span></label>

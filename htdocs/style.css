@@ -104,6 +104,8 @@ header {
 /*ヘッダーハンバーガーメニュー*/
 details{
     display: flex;
+    /* align-items: flex-start;  */
+    /* flex-direction: column-reverse; */
     height:fit-content;
     width: fit-content;
     margin-left: auto;
@@ -118,7 +120,12 @@ summary{
     font-size:20px;
     list-style:none;
     /* border: 1px black solid; */
+    /* margin:0 0 0 auto;  */
+    /* background-color: #6fbfcf; */
 }
+summary::-webkit-details-marker {
+    display:none;
+} 
 /*ハンバーガーメニューの表示*/
 summary span,
 summary span::before,
@@ -158,7 +165,7 @@ summary span:after {
 
 /* アイコンがクリックされたら真ん中の線を透明にする */
 details[open] summary span {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);  
 }
 
 /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
@@ -425,7 +432,6 @@ summary span p{
     vertical-align: middle;
 }
 
-
 /*ギャラリー文*/
 .gallery-child p {
     display: block;
@@ -486,18 +492,21 @@ summary span p{
 .explanatory{
     display: flex;
     margin:0 100px;
-
 }
 .explanatory .deliverable_img{
     width: 700px;
     height: auto;
     border: 1px solid black;
 }
-.explanatiry .text{
+.explanatory .text{
     margin:0 10px;
 }
 .explanatory h3{
+    font-size: 20px;
     color: #4B52A7;
+}
+.explanatory p{
+    font-size: 18px;
 }
 /*------------------------
 フォーム
@@ -648,6 +657,7 @@ footer p {
     width: 120px;
     /*outline: 2px black solid;*/
 }
+
 .return_top a{
     text-decoration: none;
     color: #fff;
@@ -660,7 +670,6 @@ footer p {
 {
     scroll-margin-top: 80px;
 }
-
 
 /*------------------------
 レスポンシブ
@@ -678,7 +687,12 @@ footer p {
         line-height: 48px;
         font-size: 20px;
     }
-    /*ヘッター・メニュー*/
+    /*ヘッダー・タイトル*/
+    .header-left a{
+        text-decoration: none;
+        color: #fff;
+    }
+    /*ヘッダー・メニュー*/
     .header-right {
         line-height: 48px;
     }
@@ -687,11 +701,10 @@ footer p {
         line-height: 48px;
         font-size: 16px;
     }
-
     /*ハンバーガーメニューの大きさ*/
     summary{
         height: 48px;    
-        width: 48px; 
+        width: 48px;
     }
     /*ハンバーガーメニューの表示*/
     summary span,
@@ -786,7 +799,14 @@ footer p {
 
     /*ギャラリー文*/
     .gallery-child p {
-    margin: 3.6px auto 0;
+        margin: 3.6px auto 0;
+    }
+    
+    /**/
+    .explanatory{
+        display: flex;
+        margin:0 50px;
+        flex-flow: column;
     }
 
     /*余白調整*/

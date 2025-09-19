@@ -160,7 +160,7 @@ session_start();
       </div>
       <div class="deliverable_child scroll" id="Arduino/C++">
         <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
-        <a href="./C++.html"><img src="./images/PFC++.png" alt="PFC++.png"></a>
+        <a href="./C++.html"><img src="./images/BreakingBlocks2.png" alt="PFC++.png"></a>
         <!--p>Arduinoで脈拍を取り、ubuntuにデータを送信。受信データをC++でグラフ化し、BPMをブロック崩しに送信。opencvで顔認識を行い、顔の位置でパドルのコントロールを行う。</p>
         <p>画像をクリックすると動画をご覧頂けます。</p-->
       </div>

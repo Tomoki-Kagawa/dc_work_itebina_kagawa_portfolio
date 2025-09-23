@@ -494,12 +494,17 @@ summary span p{
     margin:0 100px;
 }
 .explanatory .deliverable_img{
-    width: 700px;
-    height: auto;
+    flex: 1;
+    /* height: 300px; */
+    /* height: auto; */
+}
+.deliverable_img img{
     border: 1px solid black;
 }
 .explanatory .text{
-    margin:0 10px;
+    flex:2;
+    margin:0 20px;
+    /* width: 900px; */
 }
 .explanatory h3{
     font-size: 20px;

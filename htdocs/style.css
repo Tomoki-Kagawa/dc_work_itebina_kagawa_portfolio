@@ -3,7 +3,6 @@
 /*全体*/
 body {
     max-width: 100%;
-    /* background-color: #EAF0F6; */
 }
 html {
     scroll-behavior: smooth;
@@ -28,7 +27,6 @@ div {
 /*背景色*/
 .background-color{
     background-color: #6fbfcf;
-     /* background-color: #2c5d63; */
 }
 
 /*------------------------
@@ -39,8 +37,6 @@ header {
     position: fixed;
     height: 80px;
     width: 100%;
-    /* background-color: #000000CC; */
-    /* background-color: #A8DADC; */
     margin: 0 auto;
     display: block;
 }
@@ -52,7 +48,6 @@ header {
     margin-left: 20px;
     float: left;
     color: #fff;
-    /* font-size: 26px; */
     font-size: 32px;
     display: inline;
     vertical-align: middle;
@@ -60,7 +55,6 @@ header {
 
 /* 頭文字*/
 .header-left::first-letter{
-    /* color: #A6ACFF; */
     color: #FFD966;
 } 
 
@@ -88,7 +82,6 @@ header {
     display: inline;
     vertical-align: middle;
     text-decoration: none;
-    /* color: black; */
     color: #FFF;
     margin: 0 10px;
     font-size: 25px;
@@ -104,25 +97,18 @@ header {
 /*ヘッダーハンバーガーメニュー*/
 details{
     display: flex;
-    /* align-items: flex-start;  */
-    /* flex-direction: column-reverse; */
     height:fit-content;
     width: fit-content;
     margin-left: auto;
 }
 /*ハンバーガーメニューの大きさ*/
 summary{
-    /* margin: 20px; */
     height: 80px;    
     width: 80px;
-    /* height: 40px;     */
-    /* width: 40px; */
     font-size:20px;
     list-style:none;
-    /* border: 1px black solid; */
-    /* margin:0 0 0 auto;  */
-    /* background-color: #6fbfcf; */
 }
+/*△印を隠す*/
 summary::-webkit-details-marker {
     display:none;
 } 
@@ -134,11 +120,8 @@ summary span::after
     content: '';
     display: block;
     height: 3px;
-    /* height: 5px; */
     width: 30px;
-    /* width: 40px; */
     border-radius: 3px;
-    /* background: #333; */
     background:#FFF;
     color: #FFF;
     transition: 0.5s;
@@ -147,17 +130,14 @@ summary span::after
 /*ハンバーガーメニューの真ん中の位置 */
 summary span{
     margin:35px 25px;
-    /* margin:30px 20px; */
 }
 /* ハンバーガーメニューの上の棒の位置 */
 summary span:before {
     bottom: 8px;
-    /* bottom: 12px; */
 }
 /* ハンバーガメニューの下の棒の位置 */
 summary span:after {
     top: 8px;
-    /* top: 12px; */
 }
 .drawer_hidden{
     display: none;
@@ -182,9 +162,7 @@ details[open] summary span::after {
 /*ハンバーガーメニューのmenu部分 */
 summary span p{
     margin-top:-15px; 
-    /* margin-top:-8px; */
     margin-left:-20px; 
-    /* margin-left:-16px;  */
     font-size: 25px;
 }
 /*ヘッダーメニューの点削除*/
@@ -195,8 +173,6 @@ summary span p{
     display: flex;
     flex-flow: column;
     border-radius: 0 0 0 3px;
-    /* background-color: #000000CC; */
-    /* background-color: #A8DADC; */
 }
 .empty{
     height: 80px;
@@ -224,7 +200,6 @@ summary span p{
 /*自己紹介・日本語*/
 .intro .Japanese {
     color: #4B52A7; 
-    /*color:#fff;*/
     width: fit-content;
     padding: 80px 0 40px;
     margin: 0 auto;
@@ -249,13 +224,11 @@ summary span p{
     width: 100%;
     text-align: left;
     color: #000000;
-    /* font-size:16px; */
     font-size:18px;
 }
 
 /*自己紹介文・太字*/
 .self_introduction .bold {
-    /* font-size:16px; */
     font-size:18px;
     font-weight: bold;
 }
@@ -274,7 +247,6 @@ summary span p{
 /*BOX親*/
 .box-parent {
     display: flex;
-    /* align-items: center; */
     align-items: stretch;
     margin: 40px auto 0;
     justify-content: space-between;
@@ -283,8 +255,6 @@ summary span p{
 /*BOX子*/
 .box-child {
     width: 48%;
-    /* background-color: #000000CC; */
-    /* background-color: #A8DADC; */
     border-radius: 10px;
     padding:0 10px;
 }
@@ -329,15 +299,12 @@ summary span p{
 
 /*左のBOX*/
 .box1 li,.box1 a {
-    /* color: #FEFFC7; */
     color: #fff;
 }
 
 /*右のBOX*/
 .box2 li, .box2 a {
-    /* color: #FFE8F6; */
     color: #fff;
-    /*text-decoration: none;*/
 }
 
 /*aタグ要素の高さ合わせ*/
@@ -366,7 +333,6 @@ summary span p{
 /*実装サンプル・日本語*/
 .Sample .Japanese {
     text-align: center;
-    /* font-size: 24px; */
     font-size:36px;
     color: #4B52A7;
 }
@@ -374,7 +340,6 @@ summary span p{
 /*実装サンプル・英語*/
 .Sample .English {
     text-align: center;
-    /* font-size:14px; */
     font-size:18px;
     color: #4B52A7;
 }
@@ -386,8 +351,6 @@ summary span p{
 .gallery h3 {
     text-align: center;
     font-size:26px;
-    /* color: #32839C; */
-    /* color: #6fbfcf; */
     color: #4B52A7;
     border-bottom: 1px solid #B7B7B7;
 }
@@ -418,10 +381,7 @@ summary span p{
     display: block;
     line-height: 44px;
     text-align: center;
-    /* font-size: 14px; */
     font-size: 20px;
-    /* background-color: #000000CC; */
-    /* background-color: #A8DADC; */
     color: #fff;
     height: 100%;
     width: 95%;
@@ -467,8 +427,6 @@ summary span p{
 .deliverable h3 {
     text-align: center;
     font-size: 26px;
-    /* color: #32839C; */
-    /* color: #6fbfcf; */
     color: #4B52A7;
     margin: 0 auto;
     border-bottom: 1px solid #B7B7B7;
@@ -478,10 +436,6 @@ summary span p{
 }
 
 /*訓練成果題名*/
-/* .deliverable_child h4{ */
-    /* background-color: #000000CC; */
-    /* background-color: #A8DADC; */
-/* } */
 .deliverable_child img{
     border: 1px solid black;
 }
@@ -495,8 +449,6 @@ summary span p{
 }
 .explanatory .deliverable_img{
     flex: 1;
-    /* height: 300px; */
-    /* height: auto; */
 }
 .deliverable_img img{
     border: 1px solid black;
@@ -504,7 +456,6 @@ summary span p{
 .explanatory .text{
     flex:2;
     margin:0 20px;
-    /* width: 900px; */
 }
 .explanatory h3{
     font-size: 20px;
@@ -520,9 +471,7 @@ summary span p{
 .form .Japanese {
     color: #4B52A7;
     width: fit-content;
-    /*padding: 0px 0 40px;*/
     margin: 0 auto;
-    /* font-size:24px; */
     font-size:36px;
 }
 
@@ -532,14 +481,6 @@ summary span p{
     margin: 0 auto;
     font-size:18px;
 }
-/*フォーム見出し
-.form h3 {
-    text-align: center;
-    font-size:16px;
-    color: #32839C;
-    margin-top: 80px;
-    border-bottom: 1px solid #B7B7B7;
-}*/
 
 /*フォーム親コンテナ*/
 .form-parent {
@@ -576,8 +517,6 @@ summary span p{
 
 /*フォームラベルの前*/
 .required::before {
-    /* background: #32839C 0% 0% no-repeat padding-box; */
-    /* background: #8AB3DC 0% 0% no-repeat padding-box; */
     background: lightsalmon 0% 0% no-repeat padding-box; 
     border-radius: 4px;
     padding: 3px 8px 4px;
@@ -612,7 +551,6 @@ summary span p{
 .form-parent .button {
     width: 300px;
     height: 40px;
-    /* background: #8AB3DC 0% 0% no-repeat padding-box; */
     background: #6fbfcf 0% 0% no-repeat padding-box; 
     color: #fff;
     box-shadow: 0px 4px 0px #818694;
@@ -636,8 +574,6 @@ summary span p{
 footer {
     margin-top: 80px;
     height: 120px;
-    /* background-color: #000000CC; */
-    /* background-color: #A8DADC; */
 }
 
 /*フッター文*/
@@ -658,9 +594,7 @@ footer p {
     height: 50px;
     line-height: 50px;
     text-align: center;
-    /*transform: translateX(-80%);*/
     width: 120px;
-    /*outline: 2px black solid;*/
 }
 
 .return_top a{
@@ -744,20 +678,6 @@ footer p {
     .container {
         width: 90%;
     }
-    /*日本語文字フォント変更*/
-    /* .intro .Japanese,.Sample .Japanese{
-        font-size:20px;
-    } */
-    
-    /*英語文字フォント変更*/
-    /* .intro .English,.Sample .English{
-        font-size:12px;
-    } */
-    
-    /*自己紹介文フォント変更*/
-    /* .explanation p ,.explanation .bold{
-        font-size:14px;
-    } */
     
     /*BOXタテ並べ*/
     .box-parent {

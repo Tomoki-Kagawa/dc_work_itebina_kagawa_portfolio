@@ -124,45 +124,25 @@ session_start();
         github</a>からご覧いただけますと幸いです。</p>
       <div class="deliverable_child scroll" id="JavaScript">
         <h4 class="background-color"><span class="theme">JavaScript・ピアノ</span></h4>
-        <!--a href="./js/index.html" target="_blank"-->
         <a href="./JavaScript.html"><img src="./images/js_piano.png" alt="js_piano.png"></a>
-        <!--p>JavaScriptで作成したピアノ演奏サイトです。</p>
-        <p>音量バーで音の大きさを調整でき、鍵盤をクリックすると演奏が可能です。</p>
-        <p>自動演奏では、きらきら星かチューリップのどちらかがランダムで演奏されます。</p>
-        <p>下部の入力欄に半角で入力するとキーボードでも演奏できます。</p-->
       </div>
       
       <div class="deliverable_child scroll" id="PHP">
         <h4 class="background-color"><span class="theme">PHP・EC Site</span></h4>
-      <!--div class="deliverable_flex"-->
         <a href="./PHP.html"><img src="./images/ec_site.png" alt="ec_site.png"></a>
-      
-      <!--div> 
-        <p>PHPで作成したシンプルな見た目のECサイトです。</p>
-        <p>UIの個数を制限をし、見た目が整理されたものにしました。</p>
-        <p>商品画像をクリックすると詳細が表示されるようにしました。</p>
-        <p>購入者に購入完了メールを送るようにしました。</p>
-      </div-->
-      <!--/div-->
       </div>
       <div class="deliverable_child scroll" id="WordPerss">
         <h4 class="background-color"><span class="theme">Wordpress・SampleSite</span></h4>
         <a href="./Wordpress.html"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
-        <!--p>wordpressでsamplesiteを作成しました。</p>
-        <p>wordpress学習でテキストに沿って作成したサンプルです。</p-->
       </div>
       <h3>訓練外成果</h3>
       <div class="deliverable_child scroll" id="arcadecontroller">
         <h4 class="background-color"><span class="theme">アーケードコントローラー</span></h4>
         <a href="./Arcadecontroller.html"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
-        <!--p>趣味の格闘ゲームのアーケードコントローラーを構想含め3日で作成しました。</p>
-        <p>画像をクリックすると事業所内のスピーチで発表した時の資料のPDFをご覧頂けます。</p-->
       </div>
       <div class="deliverable_child scroll" id="Arduino/C++">
         <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
         <a href="./C++.html"><img src="./images/BreakingBlocks2.png" alt="PFC++.png"></a>
-        <!--p>Arduinoで脈拍を取り、ubuntuにデータを送信。受信データをC++でグラフ化し、BPMをブロック崩しに送信。opencvで顔認識を行い、顔の位置でパドルのコントロールを行う。</p>
-        <p>画像をクリックすると動画をご覧頂けます。</p-->
       </div>
     </div>
     <?php
@@ -241,7 +221,7 @@ session_start();
     <footer class="background-color">
       <p>Copyright &copy; 2025 Tomoki Kagawa</p>
     </footer>
-    <div class="return_top"> <!--background-color--><a href="#TOP">TOPに戻る</a></div>
+    <div class="return_top"> <a href="#TOP">TOPに戻る</a></div>
   </body>
 </html>
 <?php

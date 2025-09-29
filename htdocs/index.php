@@ -146,7 +146,7 @@ session_start();
       </div>
       <!--div class="deliverable_child scroll" id="Java">
         <h4 class="background-color"><span class="theme">Java・イライラ棒</span></h4>
-        <a href="./Java.html"><img src="./images/BreakingBlocks2.png" alt="Java.png"></a>
+        <a href="./Java.html"><img src="./images/Java.png" alt="Java.png"></a>
       </div-->
     </div>
     <?php

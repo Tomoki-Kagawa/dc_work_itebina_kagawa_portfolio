@@ -448,6 +448,9 @@ summary span p{
 .deliverable_child img{
     border: 1px solid black;
 }
+#Java img{
+    height: 500px;
+}
 
 /*------------------------
 訓練成果ページ

@@ -37,10 +37,10 @@ session_start();
       <div class="intro">
         <h2 class="Japanese">自己紹介<br><span class="English">Self Introduction</span></h2>
         <div class="explanation">
-          <p>私の名前は<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。</p>
-          <p>学生の頃は組み込み系の技術や福祉について学び、研究室では介護用ロボットの開発をしていました。</p>
-          <p>現在はディーキャリアITエキスパート海老名オフィスに通所し、訓練の一環としてポートフォリオを作成しました。</p>
-          <p>もしよろしければ最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。よろしくお願い致します。</p>
+          <p>　私の名前は、<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。</p>
+          <p>　学生の頃は、組み込み系の技術や福祉について学び、研究室では介護用ロボットの開発をしていました。</p>
+          <p>　現在は、ディーキャリアITエキスパート海老名オフィスに通所し、訓練の一環としてポートフォリオを作成しました。</p>
+          <p>　もしよろしければ最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。よろしくお願い致します。</p>
         </div>
         <img src="./images/merlion.jpg" alt="merlion.jpg">
       </div>
@@ -84,7 +84,7 @@ session_start();
             <img src="./images/marina.jpg" alt="marina.jpg">
           </div>
           <h4 class="background-color"><span class="theme">マリーナベイサンズ</span></h4>
-          <p>研修で訪れたシンガポールは、近代的な建物と時折見せる幻想的な風景が印象に残りました。旅行先としてとてもおすすめです。</p>
+          <p>　研修で訪れたシンガポールは、近代的な建物と時折見せる幻想的な風景が印象に残りました。旅行先としてとてもおすすめです。</p>
         </div>
         <!--画像2-->
         <div class="gallery02 gallery-child">
@@ -92,7 +92,7 @@ session_start();
             <img src="./images/manipulator.jpg" alt="manipulator.jpg">
           </div>  
           <h4 class="background-color"><span class="theme">移動マニピュレータ</span></h4>
-          <p>大学生の頃、移動式マニピュレーターを作成し、Javaで作成したAndroidコントローラーアプリをbluetoothで接続し操作できるものを作成しました。</p>
+          <p>　大学生の頃、移動式マニピュレータを作成し、Javaで作成したAndroidコントローラーアプリをbluetoothで接続し操作できるものを作成しました。</p>
         </div>
          <!--画像3-->
         <div class="gallery03 gallery-child scroll" id="PC">
@@ -100,7 +100,7 @@ session_start();
             <img src="./images/PC.jpg" alt="PC.jpg">
           </div>
           <h4 class="background-color"><span class="theme">自作PC</span></h4>
-          <p>コロナが流行った時期に自作PCを作成し、WindowsとUbuntuをデュアルブートできるものを作成。研究室に行けない時も作業ができる様にしました。</p>
+          <p>　コロナが流行った時期に自作PCを作成し、WindowsとUbuntuをデュアルブートできるものを作成。研究室に行けない時も作業ができる様にしました。</p>
         </div>
         <!--画像4-->
         <div class="gallery04 gallery-child">
@@ -108,9 +108,7 @@ session_start();
             <img src="./images/eel.jpg" alt="eel.jpg">
           </div>
           <h4 class="background-color"><span class="theme">ひつまぶし</span></h4>
-          <p>
-            食べることが大好きで、寿司やラーメンが好きです。展示会の出展で名古屋に行った時に食べたひつまぶしが人生で一番おいしかったです。
-          </p>
+          <p>　食べることが大好きで、寿司やラーメンが好きです。展示会の出展で名古屋に行った時に食べたひつまぶしが人生で一番おいしかったです。</p>
         </div>
       </div>
     </div>

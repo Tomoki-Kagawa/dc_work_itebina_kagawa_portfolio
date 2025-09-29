@@ -144,6 +144,10 @@ session_start();
         <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
         <a href="./C++.html"><img src="./images/BreakingBlocks2.png" alt="PFC++.png"></a>
       </div>
+      <!--div class="deliverable_child scroll" id="Java">
+        <h4 class="background-color"><span class="theme">Java・イライラ棒</span></h4>
+        <a href="./Java.html"><img src="./images/BreakingBlocks2.png" alt="Java.png"></a>
+      </div-->
     </div>
     <?php
     //メール送信

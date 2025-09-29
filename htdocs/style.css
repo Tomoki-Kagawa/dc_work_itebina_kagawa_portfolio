@@ -3,8 +3,17 @@
 /*全体*/
 body {
     max-width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 html {
+    /* margin: 0;
+    padding: 0;
+    height: 100%; */
     scroll-behavior: smooth;
 }
 
@@ -407,7 +416,7 @@ summary span p{
 訓練成果
 ------------------------*/
 .deliverable{
-    margin: 80px auto;
+    margin: 80px auto 0px;
 }
 .deliverable_flex{
     display: flex;
@@ -445,7 +454,7 @@ summary span p{
 ------------------------*/
 .explanatory{
     display: flex;
-    margin:0 100px;
+    margin:80px 100px;
 }
 .explanatory .deliverable_img{
     flex: 1;
@@ -572,8 +581,10 @@ summary span p{
 ------------------------*/
 /*フッター周り*/
 footer {
-    margin-top: 80px;
+    margin-top: auto;
     height: 120px;
+    width: 100%;
+    bottom:0;
 }
 
 /*フッター文*/

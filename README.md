@@ -3,5 +3,7 @@
 ##ec_site:PHPcode<br>
 ##image:portfoliimage<br>
 ##js:JavaScriptcode<br>
+<br>
 #include:PHPcode<br>
+<br>
 #wp/samplesite:wordpresscode<br>

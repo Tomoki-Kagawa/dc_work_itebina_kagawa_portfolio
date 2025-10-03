@@ -61,7 +61,7 @@ session_start();
           <h3 class="Japanese">プログラミング経験<br><span class="English">Experience</span></h3>
           <ul>
             <li class="C">C/C++（介護ロボット・<a href="#Arduino/C++">ブロック崩し</a>）</li>
-            <li class="Java">Java（Androidアプリ）</li>
+            <li class="Java">Java（Androidアプリ・<!--a href="#Java"-->イライラ棒<!--/a-->）</li>
             <li class="JavaScript">JavaScript（<a href="#JavaScript">ピアノアプリ</a>）</li>
             <div class="etc_flex"><li class="PHP">PHP（<a href="#PHP">EC Site</a>）</li><li class="etc">など</li></div>
           </ul>

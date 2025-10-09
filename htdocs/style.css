@@ -444,13 +444,20 @@ summary span p{
     font-size: 18px;
 }
 
-/*訓練成果題名*/
+/*訓練成果イメージ*/
 .deliverable_child img{
     border: 1px solid black;
 }
-#Java img{
-    height: 500px;
+#Java a{
+    display: block;
+    width: 100%;
+    border: 1px solid black;
 }
+#Java img{
+    height: 400px;
+     border: none;
+}
+
 
 /*------------------------
 訓練成果ページ
@@ -464,6 +471,12 @@ summary span p{
 }
 .deliverable_img img{
     border: 1px solid black;
+}
+.deliverable_img .Java_img{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    height: 400px;
 }
 .explanatory .text{
     flex:2;
@@ -744,8 +757,11 @@ footer p {
     /**/
     .explanatory{
         display: flex;
-        margin:0 50px;
+        margin:80px 50px;
         flex-flow: column;
+    }
+    .explanatory .text{
+        margin-top:40px;
     }
 
     /*余白調整*/

@@ -61,7 +61,7 @@ session_start();
           <h3 class="Japanese">プログラミング経験<br><span class="English">Experience</span></h3>
           <ul>
             <li class="C">C/C++（介護ロボット・<a href="#Arduino/C++">ブロック崩し</a>）</li>
-            <li class="Java">Java（Androidアプリ・<!--a href="#Java"-->イライラ棒<!--/a-->）</li>
+            <li class="Java">Java（Androidアプリ・<a href="#Java">イライラ棒</a>）</li>
             <li class="JavaScript">JavaScript（<a href="#JavaScript">ピアノアプリ</a>）</li>
             <div class="etc_flex"><li class="PHP">PHP（<a href="#PHP">EC Site</a>）</li><li class="etc">など</li></div>
           </ul>
@@ -142,10 +142,10 @@ session_start();
         <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
         <a href="./C++.html"><img src="./images/BreakingBlocks2.png" alt="PFC++.png"></a>
       </div>
-      <!--div class="deliverable_child scroll" id="Java">
+      <div class="deliverable_child scroll" id="Java">
         <h4 class="background-color"><span class="theme">Java・イライラ棒</span></h4>
         <a href="./Java.html"><img src="./images/Java.png" alt="Java.png"></a>
-      </div-->
+      </div>
     </div>
     <?php
     //メール送信

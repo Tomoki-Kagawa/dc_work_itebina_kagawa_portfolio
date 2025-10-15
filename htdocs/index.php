@@ -92,7 +92,7 @@ session_start();
             <img src="./images/manipulator.jpg" alt="manipulator.jpg">
           </div>  
           <h4 class="background-color"><span class="theme">移動マニピュレータ</span></h4>
-          <p>　大学生の頃、移動式マニピュレータを作成し、Javaで作成したAndroidコントローラーアプリをbluetoothで接続し操作できるものを作成しました。</p>
+          <p>　大学生の頃、移動式マニピュレータを作成し、Javaで作成したAndroidコントローラーアプリをBluetoothで接続し操作できるものを作成しました。</p>
         </div>
          <!--画像3-->
         <div class="gallery03 gallery-child scroll" id="PC">
@@ -116,7 +116,6 @@ session_start();
     <!--成果物-->
     <div class="deliverable container">
       <h3>訓練成果</h3>
-      <!--p>画像をクリックすることで作成物をご覧いただけます。</p-->
       <p>画像をクリックすることで説明ページに移動することが出来ます</p>
       <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio" target="_blank" class="git">
         github</a>からご覧いただけますと幸いです。</p>
@@ -124,13 +123,12 @@ session_start();
         <h4 class="background-color"><span class="theme">JavaScript・ピアノ</span></h4>
         <a href="./JavaScript.html"><img src="./images/js_piano.png" alt="js_piano.png"></a>
       </div>
-      
       <div class="deliverable_child scroll" id="PHP">
         <h4 class="background-color"><span class="theme">PHP・EC Site</span></h4>
         <a href="./PHP.html"><img src="./images/ec_site.png" alt="ec_site.png"></a>
       </div>
       <div class="deliverable_child scroll" id="WordPerss">
-        <h4 class="background-color"><span class="theme">Wordpress・SampleSite</span></h4>
+        <h4 class="background-color"><span class="theme">Wordpress・Sample Site</span></h4>
         <a href="./Wordpress.html"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
       </div>
       <h3>訓練外成果</h3>

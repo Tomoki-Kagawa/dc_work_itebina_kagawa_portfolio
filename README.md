@@ -1,9 +1,9 @@
 #htdocs:ポートフォリオ<br>
-##arduino_C++:arduino/C++code<br>
-##ec_site:PHPcode<br>
-##image:portfolioimage<br>
-##js:JavaScriptcode<br>
+##arduino_C++ : arduino code/C++ code<br>
+##ec_site : PHP code<br>
+##image : portfolio image<br>
+##js : JavaScript code<br>
 <br>
-#include:PHPcode<br>
+#include : PHPcode<br>
 <br>
-#wp/samplesite:wordpresscode<br>
+#wp/samplesite : wordpress code<br>

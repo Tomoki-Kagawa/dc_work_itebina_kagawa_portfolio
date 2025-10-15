@@ -1,7 +1,7 @@
 #htdocs:ポートフォリオ<br>
 ##arduino_C++:arduino/C++code<br>
 ##ec_site:PHPcode<br>
-##image:portfoliimage<br>
+##image:portfolioimage<br>
 ##js:JavaScriptcode<br>
 <br>
 #include:PHPcode<br>

@@ -1,4 +1,7 @@
-# dc_work_itebina_kagawa_portfolio
-##ec_site:PHP<br>
-##piano:JavaScript<br>
-##index.php:TopPage<br>
+#arduino_C++ : arduino code/C++ code
+#Java : Java code
+#ec_site : PHP code
+#image : portfolio image
+#js : JavaScript code
+
+#index.php : TopPage<br>

@@ -40,7 +40,8 @@ session_start();
           <p>　私の名前は、<span class="bold">賀川智紀</span>です。神奈川県座間市出身です。</p>
           <p>　学生の頃は、組み込み系の技術や福祉について学び、研究室では介護用ロボットの開発をしていました。</p>
           <p>　現在は、ディーキャリアITエキスパート海老名オフィスに通所し、訓練の一環としてポートフォリオを作成しました。</p>
-          <p>　もしよろしければ最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。よろしくお願い致します。</p>
+          <p>　もしよろしければ最下部のお問い合わせからポートフォリオをご覧いただいたご感想をお送りいただけますと幸いです。</p>
+          <p>　何卒、よろしくお願い致します。</p>
         </div>
         <img src="./images/merlion.jpg" alt="merlion.jpg">
       </div>
@@ -132,10 +133,6 @@ session_start();
         <a href="./Wordpress.html"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
       </div>
       <h3>訓練外成果</h3>
-      <div class="deliverable_child scroll" id="arcadecontroller">
-        <h4 class="background-color"><span class="theme">アーケードコントローラー</span></h4>
-        <a href="./Arcadecontroller.html"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
-      </div>
       <div class="deliverable_child scroll" id="Arduino/C++">
         <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
         <a href="./C++.html"><img src="./images/BreakingBlocks2.png" alt="PFC++.png"></a>
@@ -143,6 +140,10 @@ session_start();
       <div class="deliverable_child scroll" id="Java">
         <h4 class="background-color"><span class="theme">Java・イライラ棒</span></h4>
         <a href="./Java.html"><img src="./images/Java.png" alt="Java.png"></a>
+      </div>
+      <div class="deliverable_child scroll" id="arcadecontroller">
+        <h4 class="background-color"><span class="theme">アーケードコントローラー</span></h4>
+        <a href="./Arcadecontroller.html"><img src="./images/arcadecontroller.jpg" alt="arcadecontroller.jpg"></a>
       </div>
     </div>
     <?php

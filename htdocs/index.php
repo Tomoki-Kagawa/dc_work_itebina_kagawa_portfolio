@@ -23,6 +23,9 @@ session_start();
         <ul class="background-color">
           <li><a href="#self-introduction">自己紹介</a></li>
           <li><a href="#Archives">過去の記録</a></li>
+          <li><a href="#gallery">ーギャラリー</a></li>
+          <li><a href="#training">ー訓練成果</a></li>
+          <li><a href="#except">ー訓練外成果</a></li>
           <li><a href="#Contact">お問い合わせ</a></li>
         </ul>
       </details>
@@ -75,7 +78,7 @@ session_start();
     </div>
 
     <!--ギャラリー-->
-    <div class="gallery container">
+    <div class="gallery container scroll" id="gallery">
       <h3>ギャラリー</h3>
       <!--ギャラリー親-->
       <div class="gallery-parent">
@@ -116,7 +119,7 @@ session_start();
 
     <!--成果物-->
     <div class="deliverable container">
-      <h3>訓練成果</h3>
+      <h3 class="scroll" id="training">訓練成果</h3>
       <p>画像をクリックすることで説明ページに移動することが出来ます</p>
       <p>コードは<a href="https://github.com/Tomoki-Kagawa/dc_work_itebina_kagawa_portfolio" target="_blank" class="git">
         github</a>からご覧いただけますと幸いです。</p>
@@ -132,7 +135,7 @@ session_start();
         <h4 class="background-color"><span class="theme">Wordpress・Sample Site</span></h4>
         <a href="./Wordpress.html"><img src="./images/wordpress.png" alt="ec_site.png"></a>        
       </div>
-      <h3>訓練外成果</h3>
+      <h3 class="scroll" id="except">訓練外成果</h3>
       <div class="deliverable_child scroll" id="Arduino/C++">
         <h4 class="background-color"><span class="theme">Arduino/C++・ブロック崩し</span></h4>
         <a href="./C++.html"><img src="./images/BreakingBlocks2.png" alt="PFC++.png"></a>

@@ -11,9 +11,6 @@ body {
     min-height: 100vh;
 }
 html {
-    /* margin: 0;
-    padding: 0;
-    height: 100%; */
     scroll-behavior: smooth;
 }
 
@@ -457,7 +454,6 @@ summary span p{
     height: 400px;
      border: none;
 }
-
 
 /*------------------------
 訓練成果ページ

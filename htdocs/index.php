@@ -62,7 +62,7 @@ session_start();
         </div>
         <!--box2-->
         <div class="box2 box-child background-color">
-          <h3 class="Japanese">プログラミング経験<br><span class="English">Experience</span></h3>
+          <h3 class="Japanese">プログラミング経験<br><span class="English">Experiences</span></h3>
           <ul>
             <li class="C">C/C++（介護ロボット・<a href="#Arduino/C++">ブロック崩し</a>）</li>
             <li class="Java">Java（Androidアプリ・<a href="#Java">イライラ棒</a>）</li>

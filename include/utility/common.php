@@ -309,6 +309,7 @@ function dbUpdate($db,$table_name,$data,$update_if){
       $stmt->bindValue(':'.$if_key[0],$if_value[0],PDO::PARAM_STR);
     }
     $stmt->execute();
+    $_SESSION["error_log"]=$update;
   }
   catch (PDOException $e) {
     $_SESSION['error_log']=$e->getMessage();
@@ -459,6 +460,7 @@ function dbDelete($db,$table_name,$delete_if){
       }
     }
     $stmt->execute();
+    $_SESSION["error_log"]=$delete;//.$table_name;.$key[1].$value[1];
   }
   catch (PDOException $e) {
     $_SESSION['error_log']=$e->getMessage();

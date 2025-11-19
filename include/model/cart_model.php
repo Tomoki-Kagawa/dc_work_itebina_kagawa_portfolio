@@ -6,8 +6,8 @@
 *カートリストボタン処理
 */
 function listBtn($db){
-  $product_id="";
-  $product_qty="";
+  //$product_id=null;
+  //$product_qty=null;
   if(isset($_POST['product_id'])){
     $product_id = htmlspecialchars($_POST['product_id'], ENT_QUOTES, 'UTF-8');
   } 
@@ -22,23 +22,27 @@ function listBtn($db){
     $table_name='ec_cart';
     $user_id=$_SESSION["user_id"];
     $date =date('Y-m-d H:i:s');
-    $delete_if=['product_id' => $product_id,'user_id' => $user_id];
-    dbDelete($db,$table_name,$delete_if);
+    $update_if=['product_id' => $product_id,'user_id' => $user_id];
     $data=['user_id'=>$user_id,'product_id'=>$product_id,'product_qty'=>$product_qty,'create_date'=>$date,'update_date'=>$date];
-    dbInsert($db,$table_name,$data);
+    dbUpdate($db,$table_name,$data,$update_if);
+    // $delete_if=['product_id' => $product_id,'user_id' => $user_id];
+    // dbDelete($db,$table_name,$delete_if);
+    // $data=['user_id'=>$user_id,'product_id'=>$product_id,'product_qty'=>$product_qty,'create_date'=>$date,'update_date'=>$date];
+    // dbInsert($db,$table_name,$data);
     $_SESSION["log"]=$product_name."を".$product_qty."個に変更しました";
     ob_clean();
     header("Location: ./cart.php");
-    exit(); 
+    exit();
   }
   //削除ボタンを押した時
   if(isset($_POST['delete_btn'])){
     $table_name='ec_cart';
     $user_id=$_SESSION["user_id"];
-    $date =date('Y-m-d H:i:s');
+    $date=date('Y-m-d H:i:s');
     $delete_if=['product_id' => $product_id,'user_id' => $user_id];
-    dbDelete($db,$table_name,$delete_if);
-    $_SESSION["log"]=$product_name."をカートから出しました";
+    //dbDelete($db,$table_name,$delete_if);
+    //$_SESSION["log"]=$product_name."をカートから出しました";
+    //$_SESSION["error_log"]=$product_id.$user_id;
     ob_clean();
     header("Location: ./cart.php");
     exit(); 
@@ -48,7 +52,7 @@ function listBtn($db){
 /*
 *カートリスト処理
 */
-function  listProcess($db){
+function listProcess($db){
   $product_id="";
   $product_qty="";
   if(isset($_POST['product_id'])){
@@ -69,9 +73,9 @@ function  listProcess($db){
     $join=[['ec_stock','ec_product.product_id','ec_stock.product_id'],['ec_image','ec_product.product_id','ec_image.product_id'],['ec_cart','ec_product.product_id','ec_cart.product_id']];
     $select_if=['ec_cart.user_id'=>$user_id];
     $select_data=dbSelect($db,$table_name,$data,$join,$select_if);
-  }      
-  return $select_data; 
-}     
+  }
+  return $select_data;
+}
 
 /*
 *カートリスト表示
@@ -89,11 +93,11 @@ $count=0;
       $stock_qty=$row["stock_qty"];
       $public_flg=$row["public_flg"];
       $product_qty=$row["product_qty"];
-         
+      
       if($public_flg==1&&$stock_qty!=0){
         $count++;
-        ?>     
-        <div class="list">
+        ?>
+          <div class="list">
           <?php          
             //カートページだった場合
             if($_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/cart.php'){

@@ -6,7 +6,6 @@
 *履歴ページボタン処理
 */
 function listBtn($db){
-  $count=0;
   $product_id="";
   $product_qty="";
   //user_namePOST  

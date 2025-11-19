@@ -8,8 +8,8 @@
 function listBtn($db){
   $product_id="";
   $product_qty="";
-  //user_namePOST  
-  if(isset($_POST['product_id'])){
+  //user_namePOST
+    if(isset($_POST['product_id'])){
     $product_id = htmlspecialchars($_POST['product_id'], ENT_QUOTES, 'UTF-8');
   }
   //user_namePOST  

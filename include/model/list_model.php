@@ -49,6 +49,8 @@ function listBtn($db){
     $table_name='ec_favorite';
     $user_id=$_SESSION["user_id"];
     $date =date('Y-m-d H:i:s');
+    $delete_if=['product_id' => $product_id,'user_id' => $user_id];
+    dbDelete($db,$table_name,$delete_if);
     $data=['user_id'=>$user_id,'product_id'=>$product_id,'create_date'=>$date,'update_date'=>$date];
     dbInsert($db,$table_name,$data);
     $_SESSION["log"]= $product_name."をお気に入りに入れました";

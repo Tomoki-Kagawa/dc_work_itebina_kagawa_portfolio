@@ -8,11 +8,10 @@
 function listBtn($db){
   $product_id="";
   $product_qty="";
-  //user_namePOST
-    if(isset($_POST['product_id'])){
+
+  if(isset($_POST['product_id'])){
     $product_id = htmlspecialchars($_POST['product_id'], ENT_QUOTES, 'UTF-8');
   }
-  //user_namePOST  
   if(isset($_POST['product_qty'])){
     $product_qty = htmlspecialchars($_POST['product_qty'], ENT_QUOTES, 'UTF-8');
   }
@@ -61,17 +60,17 @@ function listBtn($db){
 *お気に入りリスト処理
 */
 function listProcess($db){
-    //お気に入りページだった場合
-    if($_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/favorite.php'){
-      $user_id=$_SESSION['user_id'];
-      $table_name="ec_product";
-      $product_id="";$product_name="";$product_description="";$price="";$public_flg="";$stock_qty="";$image_name="";
-      $data=['ec_product.product_id'=>$product_id,'ec_product.product_name'=>$product_name,'ec_product.product_description'=>$product_description,'ec_product.price'=>$price,'ec_product.public_flg'=>$public_flg,'ec_stock.stock_qty'=>$stock_qty,'ec_image.image_name'=>$image_name];
-      $join=[['ec_stock','ec_product.product_id','ec_stock.product_id'],['ec_image','ec_product.product_id','ec_image.product_id'],['ec_favorite','ec_product.product_id','ec_favorite.product_id']];
-      $select_if=['ec_favorite.user_id'=>$user_id];
-      $select_data=dbSelect($db,$table_name,$data,$join,$select_if);
-    }
-    return $select_data;
+  //お気に入りページだった場合
+  if($_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/favorite.php'){
+    $user_id=$_SESSION['user_id'];
+    $table_name="ec_product";
+    $product_id="";$product_name="";$product_description="";$price="";$public_flg="";$stock_qty="";$image_name="";
+    $data=['ec_product.product_id'=>$product_id,'ec_product.product_name'=>$product_name,'ec_product.product_description'=>$product_description,'ec_product.price'=>$price,'ec_product.public_flg'=>$public_flg,'ec_stock.stock_qty'=>$stock_qty,'ec_image.image_name'=>$image_name];
+    $join=[['ec_stock','ec_product.product_id','ec_stock.product_id'],['ec_image','ec_product.product_id','ec_image.product_id'],['ec_favorite','ec_product.product_id','ec_favorite.product_id']];
+    $select_if=['ec_favorite.user_id'=>$user_id];
+    $select_data=dbSelect($db,$table_name,$data,$join,$select_if);
+  }
+  return $select_data;
 }
 /*
 *お気に入りリスト表示

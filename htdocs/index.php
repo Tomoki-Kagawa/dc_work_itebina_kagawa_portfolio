@@ -128,7 +128,7 @@ session_start();
         <a href="./JavaScript.html"><img src="./images/js_piano.png" alt="js_piano.png"></a>
       </div>
       <div class="deliverable_child scroll" id="PHP">
-        <h4 class="background-color"><span class="theme">PHP・EC Site<br>バグを発見した為編集中</span></h4>
+        <h4 class="background-color"><span class="theme">PHP・EC Site<br>編集中</span></h4>
         <a href="./PHP.html"><img src="./images/ec_site.png" alt="ec_site.png"></a>
       </div>
       <div class="deliverable_child scroll" id="WordPerss">

@@ -169,6 +169,7 @@ function pageTitleDisplay(){
 *購入ボタン
 */
 function transitionButton($db){
+  $_SESSION["flg"]="false";
   if($_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/list.php'||$_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/favorite.php'||$_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/history.php'){
     ?>
     <div class="purchase_form">
@@ -182,83 +183,92 @@ function transitionButton($db){
   }
   if($_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/cart.php'){
     ?>
-    <script>
+   <script>
     //購入確認のwindow表示
-    function purchaseWindowDisplay(){
-      var purchase=confirm("本当に購入しますか？");
-      //OKを押した時に購入したことをwindowで知らせ、formのactionを実行する
-      if(purchase==true){     
-        <?php
-        //メール用送信関数
-        emailSend($db);
-        $user_id=$_SESSION['user_id'];
-        $order_id=0;
-        $table_name='ec_order';
-        $data=['order_id'=>$order_id];
-        $join="";
-        $select_if=['user_id'=>$user_id];
-        $order_data=dbSelect($db,$table_name,$data,$join,$select_if);
-        foreach($order_data as $row) {
-          $order_id=$row["order_id"];
-        }
-        $order_id=(int)$order_id+1;
-        $user_id=$_SESSION['user_id'];
-        $table_name="ec_product";
-        $product_id="";$product_name="";$product_description="";$price="";$public_flg="";$stock_qty="";$image_name="";$product_qty="";
-        $data=['ec_product.product_id'=>$product_id,'ec_product.product_name'=>$product_name,'ec_product.product_description'=>$product_description,'ec_product.price'=>$price,'ec_product.public_flg'=>$public_flg,'ec_stock.stock_qty'=>$stock_qty,'ec_image.image_name'=>$image_name,'ec_cart.product_qty'=>$product_qty];
-        $join=[['ec_stock','ec_product.product_id','ec_stock.product_id'],['ec_image','ec_product.product_id','ec_image.product_id'],['ec_cart','ec_product.product_id','ec_cart.product_id']];
-        $select_if=['ec_cart.user_id'=>$user_id];
-        $select_data=dbSelect($db,$table_name,$data,$join,$select_if);
-        foreach($select_data as $row) {
-          $product_id=$row["product_id"];
-          $image_name=$row["image_name"];
-          $product_name=$row["product_name"];
-          $product_description=$row["product_description"];
-          $price=$row["price"];
-          $stock_qty=$row["stock_qty"];
-          $public_flg=$row["public_flg"];
-          $product_qty=$row["product_qty"];
-          
-          $table_name='ec_history';
-          $delete_if=['product_id' => $product_id,'user_id' => $user_id];
-          dbDelete($db,$table_name,$delete_if);
-          $date =date('Y-m-d H:i:s');
-          $data=['user_id'=>$user_id,'product_id'=>$product_id,'create_date'=>$date,'update_date'=>$date];
-          dbInsert($db,$table_name,$data);
-          
-          $table_name='ec_order';
-          $date =date('Y-m-d H:i:s');
-          $data=['order_id'=>$order_id,'user_id'=>$user_id,'product_id'=>$product_id,'product_qty'=>$product_qty,'create_date'=>$date,'update_date'=>$date];
-          dbInsert($db,$table_name,$data);
-          
-          $table_name='ec_cart';
-          $user_id=$_SESSION["user_id"];
-          $date =date('Y-m-d H:i:s');
-          $delete_if=['product_id' => $product_id,'user_id' => $user_id];
-          dbDelete($db,$table_name,$delete_if);
-          
-          $stock_qty=$stock_qty-$product_qty;
-          $table_name="ec_stock";
-          $date =date('Y-m-d H:i:s');
-          $data=['stock_qty'=>$stock_qty,'update_date'=>$date];
-          $update_if=['product_id'=>$product_id];
-          dbUpdate($db,$table_name,$data,$update_if);
-        }        
-      ?>   
-      alert("購入しました");
-      }
-      else if(purchase==false){
-        //キャンセルを押した時に購入しなかったことをwindowで知らせ、formのactionを実行しない
-        event.preventDefault();
-        alert("購入しませんでした");
-      }
-    }
+    // function purchaseWindowDisplay(){
+    //   <?php
+    //     $_SESSION["flg"]="true"; 
+    //     ob_clean();
+    //     header("Location:./cart.php");
+    //     exit();
+    //     if($_SESSION["flg"]=="true"){
+    //     $_SESSION["flg"]="false";
+    //   ?>  
+        //  var purchase=confirm("本当に購入しますか？");
+        //  //OKを押した時に購入したことをwindowで知らせ、formのactionを実行する
+        //  if(purchase==true){
+    //       <?php
+    //       //メール用送信関数
+    //       emailSend($db);
+    //       $user_id=$_SESSION['user_id'];
+    //       $order_id=0;
+    //       $table_name='ec_order';
+    //       $data=['order_id'=>$order_id];
+    //       $join="";
+    //       $select_if=['user_id'=>$user_id];
+    //       $order_data=dbSelect($db,$table_name,$data,$join,$select_if);
+    //       foreach($order_data as $row) {
+    //         $order_id=$row["order_id"];
+    //       }
+    //       $order_id=(int)$order_id+1;
+    //       $user_id=$_SESSION['user_id'];
+    //       $table_name="ec_product";
+    //       $product_id="";$product_name="";$product_description="";$price="";$public_flg="";$stock_qty="";$image_name="";$product_qty="";
+    //       $data=['ec_product.product_id'=>$product_id,'ec_product.product_name'=>$product_name,'ec_product.product_description'=>$product_description,'ec_product.price'=>$price,'ec_product.public_flg'=>$public_flg,'ec_stock.stock_qty'=>$stock_qty,'ec_image.image_name'=>$image_name,'ec_cart.product_qty'=>$product_qty];
+    //       $join=[['ec_stock','ec_product.product_id','ec_stock.product_id'],['ec_image','ec_product.product_id','ec_image.product_id'],['ec_cart','ec_product.product_id','ec_cart.product_id']];
+    //       $select_if=['ec_cart.user_id'=>$user_id];
+    //       $select_data=dbSelect($db,$table_name,$data,$join,$select_if);
+    //       foreach($select_data as $row) {
+    //         $product_id=$row["product_id"];
+    //         $image_name=$row["image_name"];
+    //         $product_name=$row["product_name"];
+    //         $product_description=$row["product_description"];
+    //         $price=$row["price"];
+    //         $stock_qty=$row["stock_qty"];
+    //         $public_flg=$row["public_flg"];
+    //         $product_qty=$row["product_qty"];
+            
+    //         $table_name='ec_history';
+    //         $delete_if=['product_id' => $product_id,'user_id' => $user_id];
+    //         dbDelete($db,$table_name,$delete_if);
+    //         $date =date('Y-m-d H:i:s');
+    //         $data=['user_id'=>$user_id,'product_id'=>$product_id,'create_date'=>$date,'update_date'=>$date];
+    //         dbInsert($db,$table_name,$data);
+            
+    //         $table_name='ec_order';
+    //         $date =date('Y-m-d H:i:s');
+    //         $data=['order_id'=>$order_id,'user_id'=>$user_id,'product_id'=>$product_id,'product_qty'=>$product_qty,'create_date'=>$date,'update_date'=>$date];
+    //         dbInsert($db,$table_name,$data);
+            
+    //         $table_name='ec_cart';
+    //         $user_id=$_SESSION["user_id"];
+    //         $date =date('Y-m-d H:i:s');
+    //         $delete_if=['product_id' => $product_id,'user_id' => $user_id];
+    //         dbDelete($db,$table_name,$delete_if);
+            
+    //         $stock_qty=$stock_qty-$product_qty;
+    //         $table_name="ec_stock";
+    //         $date =date('Y-m-d H:i:s');
+    //         $data=['stock_qty'=>$stock_qty,'update_date'=>$date];
+    //         $update_if=['product_id'=>$product_id];
+    //         dbUpdate($db,$table_name,$data,$update_if);
+    //       }        
+    //     ?>   
+    //    alert("購入しました");
+    //    }
+    //    else if(purchase==false){
+    //      //キャンセルを押した時に購入しなかったことをwindowで知らせ、formのactionを実行しない
+    //      event.preventDefault();
+    //      alert("購入しませんでした");
+    //  }
+    //   <?php 
+    //   }
+    //   ?>
+    //}
     </script>
     <div class="purchase_form">
       <form action="./order.php" method="post" enctype="multipart/form-data" onsubmit="purchaseWindowDisplay()"> 
-      <?php
-        echo '<input type="submit" value="購入する" class="purchase_btn">';
-      ?>
+        <input type="submit" value="購入する" class="purchase_btn">
       </form>
     </div>
     <?php
@@ -309,7 +319,7 @@ function dbUpdate($db,$table_name,$data,$update_if){
       $stmt->bindValue(':'.$if_key[0],$if_value[0],PDO::PARAM_STR);
     }
     $stmt->execute();
-    $_SESSION["error_log"]=$update;
+    // $_SESSION["error_log"]=$update;
   }
   catch (PDOException $e) {
     $_SESSION['error_log']=$e->getMessage();
@@ -460,7 +470,8 @@ function dbDelete($db,$table_name,$delete_if){
       }
     }
     $stmt->execute();
-    $_SESSION["error_log"]=$delete;//.$table_name;.$key[1].$value[1];
+    //確認用
+    //$_SESSION["error_log"]=$delete;
   }
   catch (PDOException $e) {
     $_SESSION['error_log']=$e->getMessage();

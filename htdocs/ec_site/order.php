@@ -20,6 +20,8 @@ require_once '../../include/utility/cookie_session.php';
 sessionManagement();
 // データベース接続
 $db=dbConnection($db_dsn,$db_login_user,$db_password);
+//データベース購入処理
+purchaseProcess($db);
 // 購入済み一覧リスト処理
 $select_data=listProcess($db);
 // Viewファイル読み込み

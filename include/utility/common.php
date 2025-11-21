@@ -267,7 +267,7 @@ function transitionButton($db){
     //}
     </script>
     <div class="purchase_form">
-      <form action="./order.php" method="post" enctype="multipart/form-data" onsubmit="purchaseWindowDisplay()"> 
+      <form id="purchaseform" action="./order.php" method="post" enctype="multipart/form-data"> <!--onsubmit="purchaseWindowDisplay()"--> 
         <input type="submit" value="購入する" class="purchase_btn">
       </form>
     </div>

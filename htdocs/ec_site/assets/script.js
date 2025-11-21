@@ -191,16 +191,15 @@ if(location.pathname === "/ebina/0003/ec_site/cart.php"){
   document.getElementById('purchaseform').addEventListener('submit',function(event){
   //購入確認のwindow表示
   //function purchaseWindowDisplay(){
-      var purchase=confirm("本当に購入しますか？");
-      //OKを押した時に購入したことをwindowで知らせ、formのactionを実行する
-      if(purchase==true){
-        alert("購入しました");
-      }
-      else if(purchase==false){
+    var purchase=confirm("本当に購入しますか？");
+    //OKを押した時に購入したことをwindowで知らせ、formのactionを実行する
+    if(purchase==true){
+      alert("購入しました");
+    }
+    else if(purchase==false){
       //キャンセルを押した時に購入しなかったことをwindowで知らせ、formのactionを実行しない
       event.preventDefault();
       alert("購入しませんでした");
-      //}
     }
   });
 }

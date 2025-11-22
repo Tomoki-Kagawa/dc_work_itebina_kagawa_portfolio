@@ -26,5 +26,9 @@ listBtn($db);
 $select_data=listProcess($db);
 // Viewファイル読み込み
 include_once '../../include/view/cart_view.php';
+//　Script.読み込み
+?>
+<script src="./assets/script.js"></script>
+<?php
 // バッファー終了
 ob_end_flush();

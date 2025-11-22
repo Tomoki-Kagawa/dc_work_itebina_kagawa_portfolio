@@ -23,7 +23,8 @@ loginBtn($db);
 // Viewファイル読み込み
 include_once '../../include/view/registration_view.php';
 //　Script.読み込み
-?><script src="./assets/script.js"></script>
+?>
+<script src="./assets/script.js"></script>
 <?php
 // バッファー終了
 ob_end_flush();

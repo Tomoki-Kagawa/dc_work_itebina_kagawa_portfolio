@@ -5,7 +5,7 @@ https://portfolio02.dc-itex.com/ebina/0003/index.php<br>
 # 概要
 本レポジトリは就職活動の為に作成した成果物のコードをまとめたものになります。<br>
 ファイル位置はサーバー内構造と同じである為、少し複雑になっております。<br>
-ご承知おき頂けますと幸いです。
+ご承知おきいただけますと幸いです。
 
 # 使用言語
 HTML/CSS/JavaScript/PHP/SQL/Arduino/C++/Java

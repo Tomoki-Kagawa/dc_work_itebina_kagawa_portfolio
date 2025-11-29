@@ -11,6 +11,6 @@ https://portfolio02.dc-itex.com/ebina/0003/index.php<br>
 HTML/CSS/JavaScript/PHP/SQL/Arduino/C++/Java
 
 # ファイル構成<br>
-#htdocs:ポートフォリオのほぼすべてのコードファイル<br>
-#include : PHPの一部コードファイル<br>
-#wp/samplesite : wordpressのコードファイル<br>
+htdocs:ポートフォリオのほぼすべてのコードファイル<br>
+include : PHPの一部コードファイル<br>
+wp/samplesite : wordpressのコードファイル<br>

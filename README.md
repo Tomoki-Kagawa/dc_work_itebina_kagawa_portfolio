@@ -1,12 +1,11 @@
-#ポートフォリオ<br>
-https://portfolio02.dc-itex.com/ebina/0003/index.php
-##htdocs:ポートフォリオ<br>
-###arduino_C++ : arduino code/C++ code<br>
-###Java : Java code<br>
-###ec_site : PHP code<br>
-###image : portfolio image<br>
-###js : JavaScript code<br>
-<br>
-##include : PHPcode<br>
-<br>
-##wp/samplesite : wordpress code<br>
+# ポートフォリオ<br>
+https://portfolio02.dc-itex.com/ebina/0003/index.php<br>
+ポートフォリオアクセス時のユーザー名とパスワードは応募書類を参照してください。
+
+# 概要
+本レポジトリは就職活動の為に作成した成果物のコードをまとめたものになります。
+
+# ファイル構成<br>
+#htdocs:ポートフォリオのコードファイル<br>
+#include : PHPのコードファイル<br>
+#wp/samplesite : wordpressのコードファイル<br>

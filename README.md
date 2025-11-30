@@ -24,6 +24,6 @@ Sample Site/WordPress<br>
 アーケードコントローラー<br>
 
 ## ファイル構成<br>
-htdocs:ポートフォリオのほぼすべてのコードファイル<br>
+htdocs:ポートフォリオの一部を除いたコードファイル<br>
 include : PHPの一部コードファイル<br>
 wp/samplesite : wordpressのコードファイル<br>

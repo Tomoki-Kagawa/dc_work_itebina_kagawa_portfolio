@@ -4,7 +4,7 @@
 ## アクセス方法
 <img width="256" height="256" alt="QRcode_portfolio" src="https://github.com/user-attachments/assets/c28eb621-a31c-4a65-b43b-e72b9fdad190" /><br>
 https://portfolio02.dc-itex.com/ebina/0003/index.php<br>
-ポートフォリオアクセス時のユーザー名とパスワードは応募書類を参照してください。
+アクセス時のユーザー名とパスワードは応募書類を参照してください。
 
 ## 概要
 本レポジトリは就職活動の為に作成した成果物のコードをまとめたものになります。<br>

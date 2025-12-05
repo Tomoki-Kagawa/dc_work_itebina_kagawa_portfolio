@@ -4,6 +4,7 @@
 言語/Arduino<br>
 IDE/Arduino IDE<br>
 使用部品/Arduino nano・脈拍センサ・圧電スピーカー・LCDディスプレイ<br>
+ライブラリ/LiquidCrystal
 
 ### ブロック崩し・画像処理・脈拍描画
 言語/C++<br>

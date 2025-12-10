@@ -3,11 +3,14 @@
 *order_model.php
 */
 /*
+*PHPMailer
+*/
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+/*
 *購入処理
 */
 function purchaseProcess($db){
-  //メール送信関数
-  emailSend($db);
   //最新版ID検索
   $user_id=$_SESSION['user_id'];
   $order_id=0;
@@ -95,7 +98,7 @@ function listProcess($db){
     $select_if=['ec_order.user_id'=>$user_id,'ec_order.order_id'=>$order_id];
     $select_data=dbSelect($db,$table_name,$data,$join,$select_if);
   }
-  return $select_data;    
+  return $select_data;
 }
 /*
 *購入済みリスト表示
@@ -109,7 +112,6 @@ function listDisplay($select_data){
       $product_id=$row["product_id"];
       $image_name=$row["image_name"];
       $product_name=$row["product_name"];
-      $product_description=$row["product_description"];
       $price=$row["price"];
       $stock_qty=$row["stock_qty"];
       $public_flg=$row["public_flg"];
@@ -156,3 +158,91 @@ function completedPurchase(){
   <h1 class="complete_purchase">ご購入いただきありがとうございます</h1>
   <?php
 }
+
+/*
+*購入メールを送る
+*/
+function emailSend($db,$select_data){
+  //購入品情報取得
+  foreach($select_data as $row) {
+    $product_name=$row["product_name"];
+    $price=$row["price"];
+    $product_qty=$row["product_qty"];
+    $subtotal=$price*$product_qty;
+    $total=+$subtotal;
+    //購入ページだった場合
+    $main_message=+$product_name.'を'.$product_qty.'個　'. '単価'.$price.'円　小計'.$subtotal.'円。'.PHP_EOL;
+  }
+  
+  //メール情報取得
+  $user_id=$_SESSION["user_id"];
+  $table_name="ec_personal";
+  $personal_name="";$email_address="";
+  $data=['personal_name'=>$personal_name,'email_address'=>$email_address];
+  $join="";
+  $select_if=['user_id'=>$user_id];
+  $select_data=dbSelect($db,$table_name,$data,$join,$select_if);
+  foreach($select_data as $row) {
+    $personal_name=$row["personal_name"];
+    $to=$row["email_address"];
+  }
+  
+  //送信先のメールアドレス
+  //$from="tomoki.career15@gmail.com";
+  $subject="ご購入いただきありがとうございます";
+  $message=$personal_name."様ご購入いただきありがとうございます".PHP_EOL."購入品は下記の通りです".PHP_EOL.$main_message."合計".$total."円です";
+  $from_subject="ご購入いただきました";
+  $from_message=$personal_name."様にご購入いただきました".PHP_EOL."購入品は下記の通りです".$main_message."合計".$total."円です";
+
+  // 文字エンコードを指定
+  mb_language('Japanese');
+  mb_internal_encoding('UTF-8');
+  
+  // インスタンスを生成（true指定で例外を有効化）
+  $mail = new PHPMailer(true);
+  
+  // 文字エンコードを指定
+  $mail->CharSet = 'utf-8';
+  
+  require_once '../../htdocs/PHPMailer/src/config.php';
+
+  try {
+    // SMTPサーバの設定
+    $mail->isSMTP();                         
+    $mail->Host = $config['host'];  
+    $mail->SMTPAuth = true;                 
+    $mail->Username = $config['username'];
+    $mail->Password = 'uedccsovzdfgqevn'; 
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+    // 送受信先設定（第二引数は省略可）
+    $mail->setFrom($config['username'],'Portfolio:ECSITE'); // 送信者
+    $mail->addAddress($to,$personal_name.'様'); // 宛先
+    //$mail->Sender = 'return@example.com'; // Return-path
+    
+    // 送信内容設定
+    $mail->Subject = $subject;
+    $mail->Body    = $message;
+
+    // 送信
+    $mail->send();
+
+    // $mail->clearAddresses();
+    // $mail->addAddress($config['username'],'Portfolio:ECSITE');
+    // $mail->Subject = $from_subject;
+    // $mail->Body    = $from_message;
+    // $mail->send();
+  } catch (Exception $e) {
+    // エラーの場合
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }
+
+}
+/*ex.com/public_html/portfolio02.dc-itex.com/ebina/0003/include/model/order_model.php on line 174
+
+Warning: A non-numeric value encountered in /home/xb513874/dc-itex.com/public_html/portfolio02.dc-itex.com/ebina/0003/include/model/order_model.php on line 174
+EC Site
+ようこそec_adminさん
+menu
+
+a*/

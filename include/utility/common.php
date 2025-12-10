@@ -11,8 +11,6 @@
 *ID:xb513874_ek608
 *pass:5z6i9869r6
 */
-
-
 /*
 * ヘッダーメニュー表示・ハンバーガーメニュー表示
 */
@@ -457,30 +455,4 @@ function errorDisplay(){
     <?php
     $_SESSION["error_log"]="";
   }
-}
-
-/*
-*購入メールを送る
-*/
-function emailSend($db){
-  $user_id=$_SESSION["user_id"];
-  $table_name="ec_personal";
-  $personal_name="";$email_address="";
-  $data=['personal_name'=>$personal_name,'email_address'=>$email_address];
-  $join="";
-  $select_if=['user_id'=>$user_id];
-  $select_data=dbSelect($db,$table_name,$data,$join,$select_if);
-  foreach($select_data as $row) {
-    $personal_name=$row["personal_name"];
-    $to=$row["email_address"];
-  }
-  
-  //送信先のメールアドレス
-  //$to="tomoki.career15@gmail.com";
-  $subject="ご購入いただきありがとうございます";
-  $message=$personal_name."様ご購入いただきありがとうございます";
-  $header="From: tomoki.career15@gmail.com";
-  mb_language("Japanese");
-  mb_internal_encoding("UTF-8");
-  mb_send_mail($to,$subject,$message,$header);
 }

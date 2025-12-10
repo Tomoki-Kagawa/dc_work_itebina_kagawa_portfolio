@@ -2,6 +2,8 @@
 <?php
 ob_start();
 session_start();
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 ?>
 <!DOCTYPE html>
 <html lang="en">

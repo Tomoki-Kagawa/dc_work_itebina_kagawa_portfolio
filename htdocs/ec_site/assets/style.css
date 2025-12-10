@@ -158,11 +158,12 @@ summary span p{
 }
 /*登録フォーム*/
 .management_form{
+  width: 380px;
+  text-align: center;
   padding: 5px;
-  margin: 30px auto 0 auto;
+  margin: 30px auto 0;
   background-color: greenyellow;
   height: fit-content;
-  width: fit-content;
   border-radius: 5px;
 }
 /*説明文記入欄の大きさ*/
@@ -170,14 +171,21 @@ summary span p{
   height: 100px;
   overflow-wrap: break-word;
 }
-/*記入欄の大きさ*/
+/*記入欄の縦並び*/
 .labelsize{
+  display: flex;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+.management_form .text_width ,.management_form .input_right{
   width: 300px;
 }
 /*登録フォームのボタン*/
 .btn{
+    display: flex;
     width: 200px;
-    margin: 10px 10px;
+    margin: 10px auto;
 }
 /*登録済みの表示*/
 table,td,th{

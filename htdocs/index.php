@@ -201,11 +201,11 @@ require_once './PHPMailer/src/SMTP.php';
           </div>
           <div class="form-child">
             <label class="not_required"><span class="label">お問い合わせ内容</span></label>
-            <input type="text" name="inquiry">
+            <textarea name="inquiry"></textarea>
           </div>
           <div class="form-child">
             <label class="not_required"><span class="label">ポートフォリオをご覧いただいた感想</span></label>
-            <input type="text" name="impression">
+            <textarea name="impression" ></textarea>
           </div>
           <input class="button" name="send_btn" id="send_btn" type="submit" value="送信">
         </div>

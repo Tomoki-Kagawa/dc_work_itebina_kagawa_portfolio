@@ -569,6 +569,16 @@ summary span p{
     border-radius: 10px;
     height: 40px;
     width: 600px;
+    padding: 5px;
+}
+
+/*フォーム入力*/
+.form-child textarea {
+    border: 1px solid #B7B7B7;
+    border-radius: 10px;
+    height: 100px;
+    width: 600px;
+    padding: 5px;
 }
 
 /*フォームボタン*/

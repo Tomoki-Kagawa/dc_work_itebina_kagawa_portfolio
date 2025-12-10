@@ -65,18 +65,18 @@ function formManagementDisplay(){
 ?>
   <div class="management_form" >
     <h3>商品登録フォーム</h3>
-    <form method="post" enctype="multipart/form-data" class="management_form" id="management_form">
-       <div><label for="product_name" class="labelsize">商品名</label>：<input type="text" id="product_name" name="product_name"></div>
+    <form method="post" enctype="multipart/form-data" id="management_form">
+       <div><label for="product_name" class="labelsize">商品名</label><input type="text" id="product_name" class="text_width" name="product_name"></div>
        <div id="name_error" class="error-message">商品名を入力してください。</div>
-       <div><label for="product_description" class="labelsize">説明文</label>：<input type="text" id="product_description" name="product_description"></div>
+       <div><label for="product_description" class="labelsize">説明文</label><textarea id="product_description" class="text_width" name="product_description"></textarea></div>
        <div id="description_error" class="error-message">説明文を入力してください。</div>
-       <div><label for="price" class="labelsize">価格(円)</label>：<input type="text" id="price" name="price"></div>
+       <div><label for="price" class="labelsize">価格(円)</label><input type="text" id="price" class="text_width" name="price"></div>
        <div id="price_error" class="error-message">価格は1以上の整数を入力してください。</div>
-       <div><label for="count" class="labelsize">在庫数(個)</label>：<input type="text" id="stock_qty" name="stock_qty" id="stock_qty" ></div>
+       <div><label for="count" class="labelsize">在庫数(個)</label><input type="text" id="stock_qty" name="stock_qty" class="text_width" ></div>
        <div id="stock_qty_error" class="error-message">数量は1以上の整数を入力してください。</div>
-       <div><label for="image_file" class="labelsize">商品画像</label>：<input type="file" name="image" class="image" id="image" ></div>
+       <div><label for="image_file" class="labelsize">商品画像</label><input type="file" name="image" class="image" id="image" ></div>
        <div id="image_error" class="error-message">JPEG または PNG 形式の画像を選択してください。</div>
-       <div><label for="public_flg" class="labelsize">公開状態</label>：
+       <div><label for="public_flg" class="labelsize">公開状態</label>
        <label><input type="radio" name="public_flg" class="public_flg"  value="1" checked>公開にする</label>
        <label><input type="radio" name="public_flg" class="public_flg"  value="0">非公開にする</label>
       </div>  

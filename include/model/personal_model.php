@@ -81,11 +81,11 @@ function personalDisplay($select_data){
   ?>
   <div class="management_form">
     <h3>個人情報登録フォーム</h3>
-    <form method="post" enctype="multipart/form-data" class="management_form">
-      <div><label for="tel" class="labelsize">名前</label>：<input type="text" class="input_right" id="personal_name"  name="personal_name" value="<?php echo $personal_name; ?>"></div>
-      <div><label for="tel" class="labelsize">電話番号</label>：<input type="text" class="input_right" id="tel" name="tel" value="<?php echo $tel; ?>"></div>
-      <div><label for="email_address" class="labelsize">メールアドレス</label>：<input type="text" class="input_right" id="email_address" name="email_address" value="<?php echo $email_address; ?>"></div>
-      <div><label for="address" class="labelsize">住所</label>：<input type="text" class="input_right" id="address" name="address" value="<?php echo $address; ?>"></div>
+    <form method="post" enctype="multipart/form-data">
+      <div><label for="tel" class="labelsize">名前</label><input type="text" class="input_right" id="personal_name"  name="personal_name" value="<?php echo $personal_name; ?>"></div>
+      <div><label for="tel" class="labelsize">電話番号</label><input type="text" class="input_right" id="tel" name="tel" value="<?php echo $tel; ?>"></div>
+      <div><label for="email_address" class="labelsize">メールアドレス</label><input type="text" class="input_right" id="email_address" name="email_address" value="<?php echo $email_address; ?>"></div>
+      <div><label for="address" class="labelsize">住所</label><input type="text" class="input_right" id="address" name="address" value="<?php echo $address; ?>"></div>
       <input class="btn" name="personal_btn" type="submit" value="登録">
    </form>
   </div>

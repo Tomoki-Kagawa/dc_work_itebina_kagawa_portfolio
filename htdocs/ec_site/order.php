@@ -6,7 +6,7 @@
 ob_start();
 // Sessionスタート
 session_start();
-// 設置した場所のパスを指定する
+// メールファイルの読み込み
 require_once '../../htdocs/PHPMailer/src/PHPMailer.php';
 require_once '../../htdocs/PHPMailer/src/Exception.php';
 require_once '../../htdocs/PHPMailer/src/SMTP.php';

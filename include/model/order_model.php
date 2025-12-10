@@ -164,14 +164,17 @@ function completedPurchase(){
 */
 function emailSend($db,$select_data){
   //購入品情報取得
+  $total=0;
+  $subtotal=0;
+  $main_message="";
   foreach($select_data as $row) {
     $product_name=$row["product_name"];
     $price=$row["price"];
     $product_qty=$row["product_qty"];
     $subtotal=$price*$product_qty;
-    $total=+$subtotal;
+    $total+=$subtotal;
     //購入ページだった場合
-    $main_message=+$product_name.'を'.$product_qty.'個　'. '単価'.$price.'円　小計'.$subtotal.'円。'.PHP_EOL;
+    $main_message.=$product_name.'を'.$product_qty.'個　'. '単価'.$price.'円　小計'.$subtotal.'円'.PHP_EOL;
   }
   
   //メール情報取得
@@ -187,62 +190,43 @@ function emailSend($db,$select_data){
     $to=$row["email_address"];
   }
   
-  //送信先のメールアドレス
-  //$from="tomoki.career15@gmail.com";
   $subject="ご購入いただきありがとうございます";
   $message=$personal_name."様ご購入いただきありがとうございます".PHP_EOL."購入品は下記の通りです".PHP_EOL.$main_message."合計".$total."円です";
   $from_subject="ご購入いただきました";
-  $from_message=$personal_name."様にご購入いただきました".PHP_EOL."購入品は下記の通りです".$main_message."合計".$total."円です";
+  $from_message=$personal_name."様にご購入いただきました".PHP_EOL."購入品は下記の通りです".PHP_EOL.$main_message."合計".$total."円です";
 
-  // 文字エンコードを指定
   mb_language('Japanese');
   mb_internal_encoding('UTF-8');
-  
-  // インスタンスを生成（true指定で例外を有効化）
   $mail = new PHPMailer(true);
-  
-  // 文字エンコードを指定
   $mail->CharSet = 'utf-8';
   
+  //個人情報呼び出し
   require_once '../../htdocs/PHPMailer/src/config.php';
 
   try {
-    // SMTPサーバの設定
+    //購入者様用メール
     $mail->isSMTP();                         
     $mail->Host = $config['host'];  
     $mail->SMTPAuth = true;                 
     $mail->Username = $config['username'];
-    $mail->Password = 'uedccsovzdfgqevn'; 
+    $mail->Password = $config['password']; 
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
-    // 送受信先設定（第二引数は省略可）
-    $mail->setFrom($config['username'],'Portfolio:ECSITE'); // 送信者
-    $mail->addAddress($to,$personal_name.'様'); // 宛先
-    //$mail->Sender = 'return@example.com'; // Return-path
-    
-    // 送信内容設定
+    $mail->setFrom($config['username'],'Portfolio:ECSITE'); 
+    $mail->addAddress($to,$personal_name.'様'); 
     $mail->Subject = $subject;
     $mail->Body    = $message;
-
-    // 送信
     $mail->send();
 
-    // $mail->clearAddresses();
-    // $mail->addAddress($config['username'],'Portfolio:ECSITE');
-    // $mail->Subject = $from_subject;
-    // $mail->Body    = $from_message;
-    // $mail->send();
+    //お店宛メール
+    $mail->clearAddresses();
+    $mail->addAddress($config['username'],'Portfolio:ECSITE');
+    $mail->Subject = $from_subject;
+    $mail->Body    = $from_message;
+    $mail->send();
   } catch (Exception $e) {
     // エラーの場合
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
 
 }
-/*ex.com/public_html/portfolio02.dc-itex.com/ebina/0003/include/model/order_model.php on line 174
-
-Warning: A non-numeric value encountered in /home/xb513874/dc-itex.com/public_html/portfolio02.dc-itex.com/ebina/0003/include/model/order_model.php on line 174
-EC Site
-ようこそec_adminさん
-menu
-
-a*/

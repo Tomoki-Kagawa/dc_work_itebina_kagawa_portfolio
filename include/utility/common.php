@@ -166,8 +166,7 @@ function pageTitleDisplay(){
 /*
 *購入ボタン
 */
-function transitionButton($db){
-  $_SESSION["flg"]="false";
+function transitionButton(){
   if($_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/list.php'||$_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/favorite.php'||$_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/history.php'){
     ?>
     <div class="purchase_form">
@@ -180,7 +179,7 @@ function transitionButton($db){
   if($_SERVER['REQUEST_URI']=='/ebina/0003/ec_site/cart.php'){
     ?>
     <div class="purchase_form">
-      <form id="purchase_form" action="./order.php" method="post" enctype="multipart/form-data"> <!--onsubmit="purchaseWindowDisplay()"--> 
+      <form id="purchase_form" action="./order.php" method="post" enctype="multipart/form-data">
         <input type="submit" value="購入する" class="purchase_btn">
       </form>
     </div>

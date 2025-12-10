@@ -19,7 +19,7 @@ favorite_view.php
   // お気に入りリスト表示
   listDisplay($select_data);
   // カートへ移動ボタン表示
-  transitionButton($db);
+  transitionButton();
   ?>
   </body>
 </html>

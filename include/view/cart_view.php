@@ -21,7 +21,7 @@ cart_view.php
   // 小計表示
   totalDisplay($db);
   // 購入ボタン表示
-  transitionButton($db);
+  transitionButton();
   ?>
   </body>
 </html>

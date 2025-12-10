@@ -102,6 +102,13 @@ function listProcess($db){
 }
 /*
 *購入済みリスト表示
+arning
+: Invalid argument supplied for foreach() in
+/home/xb513874/dc-itex.com/public_html/portfolio02.dc-itex.com/ebina/0003/include/model/order_model.php
+on line
+111
+
+
 */      
 function listDisplay($select_data){
   $count=0;
@@ -191,9 +198,9 @@ function emailSend($db,$select_data){
   }
   
   $subject="ご購入いただきありがとうございます";
-  $message=$personal_name."様ご購入いただきありがとうございます".PHP_EOL."購入品は下記の通りです".PHP_EOL.$main_message."合計".$total."円です";
+  $message=$personal_name."様ご購入いただきありがとうございます".PHP_EOL."購入品は下記の通りです".PHP_EOL.$main_message."合計".$total."円";
   $from_subject="ご購入いただきました";
-  $from_message=$personal_name."様にご購入いただきました".PHP_EOL."購入品は下記の通りです".PHP_EOL.$main_message."合計".$total."円です";
+  $from_message=$personal_name."様にご購入いただきました".PHP_EOL."購入品は下記の通りです".PHP_EOL.$main_message."合計".$total."円";
 
   mb_language('Japanese');
   mb_internal_encoding('UTF-8');
@@ -211,7 +218,7 @@ function emailSend($db,$select_data){
     $mail->Username = $config['username'];
     $mail->Password = $config['password']; 
     $mail->SMTPSecure = 'tls';
-    $mail->Port = 587;
+    $mail->Port = $config['port'];
     $mail->setFrom($config['username'],'Portfolio:ECSITE'); 
     $mail->addAddress($to,$personal_name.'様'); 
     $mail->Subject = $subject;
@@ -225,8 +232,6 @@ function emailSend($db,$select_data){
     $mail->Body    = $from_message;
     $mail->send();
   } catch (Exception $e) {
-    // エラーの場合
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "メール送信エラー: {$mail->ErrorInfo}";
   }
-
 }

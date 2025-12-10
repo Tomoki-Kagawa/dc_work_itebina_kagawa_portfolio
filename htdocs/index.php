@@ -172,24 +172,8 @@ require_once './PHPMailer/src/SMTP.php';
       if(isset($_POST['impression'])){
         $impression = htmlspecialchars($_POST['impression'], ENT_QUOTES, 'UTF-8');
       }
+      //メール送信
       emailSend($name,$email,$inquiry,$impression);
-
-      //送信先のメールアドレス
-      // $to="tomoki.career15@gmail.com";
-      // $from=$email;
-      // $subject_from="PortFolio:".$name."様下記の内容でお問い合わせしました。";
-      // $subject="PortFolio:".$name."様からお問い合わせです。";
-      // $message=
-      // "PortFolio:".$name."様からお問い合わせです。
-      // お問い合わせ内容：".$inquiry."
-      // PortFolioを見た感想：".$impression;
-      // $header="From:".$email;
-      // $header_admin="From:".$to;
-
-      // mb_language("Japanese");
-      // mb_internal_encoding("UTF-8");
-      // mb_send_mail($to,$subject,$message,$header);
-      // mb_send_mail($from,$subject_from,$message,$header_admin);
       ob_clean();
       header("Location:./index.php");
       exit();
@@ -242,12 +226,10 @@ require_once './PHPMailer/src/SMTP.php';
 */
 function emailSend($name,$email,$inquiry,$impression){
   $subject="PortFolio:".$name."様からお問い合わせです";
-  $message="PortFolio:".$name."様からお問い合わせです。".PHP_EOL."
-      メールアドレス：".$email.PHP_EOL."
-      お問い合わせ内容：".$inquiry.PHP_EOL."
-      PortFolioを見た感想：".$impression;
-  $from_subject="PortFolio:送信確認メール";
-  $from_message=$name."様お問い合わせいただきありがとうございます。".PHP_EOL."下記の内容でお問い合わせしました。".PHP_EOL.$message;
+  $message=$name."様からお問い合わせです。".PHP_EOL."メールアドレス：".$email.PHP_EOL."お問い合わせ内容：".$inquiry.PHP_EOL."PortFolioを見た感想：".$impression;
+  $from_subject="PortFolio:お問い合わせ控え";
+  $from_message=$name."様お問い合わせいただきありがとうございます。".PHP_EOL."下記の内容でお問い合わせしました。".PHP_EOL."--".PHP_EOL.$message.PHP_EOL."--";
+  
   mb_language('Japanese');
   mb_internal_encoding('UTF-8');
   $mail = new PHPMailer(true);
@@ -265,21 +247,21 @@ function emailSend($name,$email,$inquiry,$impression){
     $mail->Password = $config['password'];
     $mail->SMTPSecure = 'tls';
     $mail->Port = $config['port'];
-    $mail->setFrom($to,$personal_name.'様'); 
-    $mail->addAddress($config['username'],'Portfolio:ECSITE'); 
+    $mail->setFrom($email,$name.'様'); 
+    $mail->addAddress($config['username'],'Portfolio:tomoki'); 
     $mail->Subject = $subject;
     $mail->Body = $message;
     $mail->send();
 
     //お問い合わせ主宛メール
     $mail->clearAddresses();
-    $mail->addAddress($config['username'],'Portfolio:ECSITE');
+    $mail->addAddress($email,$name.'様');
     $mail->Subject = $from_subject;
     $mail->Body    = $from_message;
     $mail->send();
   } catch (Exception $e) {
     // エラーの場合
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo "メール送信エラー: {$mail->ErrorInfo}";
   }
 
 }

@@ -19,7 +19,7 @@ list_view.php
   // 商品リスト表示
   listDisplay($select_data);
   // カートへ移動ボタン表示
-  transitionButton($db);
+  transitionButton();
   ?> 
   </body>
 </html>

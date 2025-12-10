@@ -1,3 +1,9 @@
+/*
+*ECSITE内のJavaScriptコード
+*/
+/*
+*登録時のバリデーションチェック
+*/
 if(location.pathname === "/ebina/0003/ec_site/registration.php"){
 
   // 入力要素とエラー表示要素を取得
@@ -65,7 +71,9 @@ if(location.pathname === "/ebina/0003/ec_site/registration.php"){
     }
   });
 }
-
+/*
+*商品登録時のバリデーションチェック
+*/
 if(location.pathname === "/ebina/0003/ec_site/management.php"){
 
   // 要素を取得
@@ -186,7 +194,9 @@ if(location.pathname === "/ebina/0003/ec_site/management.php"){
   image_error.style.display = 'none';
   submit_btn.disabled = true;
 }
-
+/*
+*購入時アラート表示
+*/
 if(location.pathname === "/ebina/0003/ec_site/cart.php"){
   document.getElementById('purchase_form').addEventListener('submit',function(e){
     //購入確認のwindow表示

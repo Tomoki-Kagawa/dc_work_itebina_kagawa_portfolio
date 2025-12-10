@@ -2,7 +2,6 @@
 /*
 *cookie_session.php
 */
-
 /*
 *ログイン確認 
 */

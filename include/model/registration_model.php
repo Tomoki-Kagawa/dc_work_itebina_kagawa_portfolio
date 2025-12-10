@@ -98,14 +98,14 @@ function hashCheck($password,$password_hash){
 * バリデーション
 */
 function validationCheck($user_name,$password){
-  if(preg_match('/^[a-zA-Z0-9_]{5,}$/',$user_name)&&preg_match('/^[a-zA-Z0-9_]{8,}$/',$password)/*&&$_POST["js_vc_user_name"]==='true'&&$_POST["js_vc_password"]==='true'*/){
+  if(preg_match('/^[a-zA-Z0-9_]{5,}$/',$user_name)&&preg_match('/^[a-zA-Z0-9_]{8,}$/',$password)){
     return true;
   }
-  elseif(!preg_match('/^[a-zA-Z0-9_]{5,}$/',$user_name)&&preg_match('/^[a-zA-Z0-9_]{8,}$/',$password)/*&&$_POST["js_vc_user_name"]==='false'&&$_POST["js_vc_password"]==='true'*/){
+  elseif(!preg_match('/^[a-zA-Z0-9_]{5,}$/',$user_name)&&preg_match('/^[a-zA-Z0-9_]{8,}$/',$password)){
     $_SESSION["error_log"]="ユーザー名は5文字以上かつ半角英数字かアンダースコア(_)にしてください";
     return false;
   }
-  elseif(preg_match('/^[a-zA-Z0-9_]{5,}$/',$user_name)&&!preg_match('/^[a-zA-Z0-9_]{8,}$/',$password)/*&&$_POST["js_vc_user_name"]==='true'&&$_POST["js_vc_password"]==='false'*/){
+  elseif(preg_match('/^[a-zA-Z0-9_]{5,}$/',$user_name)&&!preg_match('/^[a-zA-Z0-9_]{8,}$/',$password)){
     $_SESSION["error_log"]="パスワードは8文字以上かつ半角英数字かアンダースコア(_)にしてください";
     return false;
   }

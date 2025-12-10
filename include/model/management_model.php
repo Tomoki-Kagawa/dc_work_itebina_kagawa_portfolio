@@ -239,14 +239,14 @@ function managerConfirmation($db){
 * バリデーション
 */
 function validationManagementCheck($price,$stock_qty){
-  if(preg_match('/^[0-9]+$/',$price)&&preg_match('/^[0-9]+$/',$stock_qty)/*&&$_POST["js_vc_price"]==='true'&&$_POST["js_vc_stock_qty"]==='true'*/){
+  if(preg_match('/^[0-9]+$/',$price)&&preg_match('/^[0-9]+$/',$stock_qty)){
     return true;
   }
-  elseif(!preg_match('/^[0-9]+$/',$price)&&preg_match('/^[0-9]+$/',$stock_qty)/*&&$_POST["js_vc_price"]==='false'&&$_POST["js_vc_stock_qty"]==='true'*/){
+  elseif(!preg_match('/^[0-9]+$/',$price)&&preg_match('/^[0-9]+$/',$stock_qty)){
     $_SESSION["error_log"]="価格には0以上の整数を入れてください";
     return false;
   }
-  elseif(preg_match('/^[0-9]+$/',$price)&&!preg_match('/^[0-9]+$/',$stock_qty)/*&&$_POST["js_vc_price"]==='true'&&$_POST["js_vc_stock_qty"]==='false'*/){
+  elseif(preg_match('/^[0-9]+$/',$price)&&!preg_match('/^[0-9]+$/',$stock_qty)){
     $_SESSION["error_log"]="在庫数には0以上の整数を入れてください";
     return false;
   }

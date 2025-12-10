@@ -102,13 +102,6 @@ function listProcess($db){
 }
 /*
 *購入済みリスト表示
-arning
-: Invalid argument supplied for foreach() in
-/home/xb513874/dc-itex.com/public_html/portfolio02.dc-itex.com/ebina/0003/include/model/order_model.php
-on line
-111
-
-
 */      
 function listDisplay($select_data){
   $count=0;

@@ -1,6 +1,6 @@
 # PHP
 ## ファイル構成
-assets:JavaScript・CSSファイル
+assets:JavaScript・CSSファイル<br>
 image :商品画像保存ファイル
 
 ## 開発環境

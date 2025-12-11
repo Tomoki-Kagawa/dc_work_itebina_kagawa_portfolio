@@ -1,6 +1,7 @@
 # ファイル構成<br>
 arduino_C++     : arduinoとC++のコードファイル<br>
 Java/ShockMaze  : Javaのコードファイル<br>
+PHPMailer/src   : メール送信の為のライブラリ<br>
 ec_site         : PHPのコードファイル<br>
 image           : portfolioで使用している画像ファイル<br>
 js              : JavaScriptのコードファイル<br>

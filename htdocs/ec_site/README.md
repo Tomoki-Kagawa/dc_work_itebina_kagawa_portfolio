@@ -1,4 +1,8 @@
 # PHP
+## ファイル構成
+assets:JavaScript・CSSファイル
+image :商品画像保存ファイル
+
 ## 開発環境
 言語/PHP・SQL・JavaScript・HTML・CSS<br>
 エディタ/Visual Studio Code<br>

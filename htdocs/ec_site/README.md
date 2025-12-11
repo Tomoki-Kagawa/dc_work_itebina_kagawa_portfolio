@@ -1,7 +1,7 @@
 # PHP
 ## ファイル構成
 assets:JavaScript・CSSファイル<br>
-image :商品画像保存ファイル
+image :商品画像保存ファイル<br>
 PHPファイル:EC_SITE各ページのコントローラー
 
 ## 開発環境

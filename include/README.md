@@ -1,8 +1,9 @@
 # PHP
 ## ファイル構成
-assets:JavaScript・CSSファイル<br>
-image :商品画像保存ファイル<br>
-PHPファイル:EC_SITE各ページのコントローラー
+config :定数保存場所ファイル<br>
+model  :EC_SITEモデル
+utility:EC_SITE
+view   :EC_SITE
 
 ## 開発環境
 言語/PHP・SQL・JavaScript・HTML・CSS<br>
